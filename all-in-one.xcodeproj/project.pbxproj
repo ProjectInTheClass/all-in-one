@@ -13,6 +13,12 @@
 		4E65AD1428213F3E0081482B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E65AD1228213F3E0081482B /* Main.storyboard */; };
 		4E65AD1628213F3F0081482B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E65AD1528213F3F0081482B /* Assets.xcassets */; };
 		4E65AD1928213F3F0081482B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E65AD1728213F3F0081482B /* LaunchScreen.storyboard */; };
+		FD598D21283ED01B0077AB56 /* AlarmTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD598D20283ED01B0077AB56 /* AlarmTab.storyboard */; };
+		FD598D23283ED1360077AB56 /* AlarmTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD598D22283ED1360077AB56 /* AlarmTabViewController.swift */; };
+		FD598D25283ED3090077AB56 /* tempData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD598D24283ED3090077AB56 /* tempData.swift */; };
+		FDD3C477283F3E7400E90DCF /* alarmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3C476283F3E7400E90DCF /* alarmAPI.swift */; };
+		FDD3C47A283F4EF900E90DCF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD3C478283F4EF900E90DCF /* CustomTableViewCell.swift */; };
+		FDD3C47B283F4EF900E90DCF /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDD3C479283F4EF900E90DCF /* CustomTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		4E65AD1528213F3F0081482B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E65AD1828213F3F0081482B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E65AD1A28213F3F0081482B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD598D20283ED01B0077AB56 /* AlarmTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlarmTab.storyboard; sourceTree = "<group>"; };
+		FD598D22283ED1360077AB56 /* AlarmTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmTabViewController.swift; sourceTree = "<group>"; usesTabs = 0; };
+		FD598D24283ED3090077AB56 /* tempData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tempData.swift; sourceTree = "<group>"; };
+		FDD3C476283F3E7400E90DCF /* alarmAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alarmAPI.swift; sourceTree = "<group>"; };
+		FDD3C478283F4EF900E90DCF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		FDD3C479283F4EF900E90DCF /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,12 @@
 		4E65AD0B28213F3E0081482B /* all-in-one */ = {
 			isa = PBXGroup;
 			children = (
+				FDD3C478283F4EF900E90DCF /* CustomTableViewCell.swift */,
+				FDD3C479283F4EF900E90DCF /* CustomTableViewCell.xib */,
+				FDD3C476283F3E7400E90DCF /* alarmAPI.swift */,
+				FD598D24283ED3090077AB56 /* tempData.swift */,
+				FD598D22283ED1360077AB56 /* AlarmTabViewController.swift */,
+				FD598D20283ED01B0077AB56 /* AlarmTab.storyboard */,
 				4E65AD0C28213F3E0081482B /* AppDelegate.swift */,
 				4E65AD0E28213F3E0081482B /* SceneDelegate.swift */,
 				4E65AD1028213F3E0081482B /* ViewController.swift */,
@@ -127,6 +145,8 @@
 			files = (
 				4E65AD1928213F3F0081482B /* LaunchScreen.storyboard in Resources */,
 				4E65AD1628213F3F0081482B /* Assets.xcassets in Resources */,
+				FD598D21283ED01B0077AB56 /* AlarmTab.storyboard in Resources */,
+				FDD3C47B283F4EF900E90DCF /* CustomTableViewCell.xib in Resources */,
 				4E65AD1428213F3E0081482B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +160,11 @@
 			files = (
 				4E65AD1128213F3E0081482B /* ViewController.swift in Sources */,
 				4E65AD0D28213F3E0081482B /* AppDelegate.swift in Sources */,
+				FD598D23283ED1360077AB56 /* AlarmTabViewController.swift in Sources */,
+				FDD3C47A283F4EF900E90DCF /* CustomTableViewCell.swift in Sources */,
 				4E65AD0F28213F3E0081482B /* SceneDelegate.swift in Sources */,
+				FDD3C477283F3E7400E90DCF /* alarmAPI.swift in Sources */,
+				FD598D25283ED3090077AB56 /* tempData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
