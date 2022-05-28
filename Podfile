@@ -6,11 +6,6 @@ target 'all-in-one' do
   use_frameworks!
 
   # Pods for all-in-one
-	
-pod 'FSCalendar'
-pod 'RealmSwift'
-pod 'CalculateCalendarLogic'
-pod 'Alamofire', '~> 4.4'
-
+  pod 'Alamofire', '~> 4.4'
 
 end
