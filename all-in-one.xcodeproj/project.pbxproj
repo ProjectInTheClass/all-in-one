@@ -20,6 +20,10 @@
 		4E65AD1428213F3E0081482B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E65AD1228213F3E0081482B /* Main.storyboard */; };
 		4E65AD1628213F3F0081482B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E65AD1528213F3F0081482B /* Assets.xcassets */; };
 		4E65AD1928213F3F0081482B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E65AD1728213F3F0081482B /* LaunchScreen.storyboard */; };
+		8083623028423F5A00712B96 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8083622F28423F5A00712B96 /* CalendarViewController.swift */; };
+		808362322842401100712B96 /* CalendarDitailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808362312842401100712B96 /* CalendarDitailViewController.swift */; };
+		808362342842404F00712B96 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808362332842404F00712B96 /* AddViewController.swift */; };
+		80836236284240A700712B96 /* AddData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80836235284240A700712B96 /* AddData.swift */; };
 		9FA717ED2CEB9ABC93911D2A /* Pods_all_in_one.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3113E7EE47DD18936BD1999C /* Pods_all_in_one.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +47,10 @@
 		4E65AD1528213F3F0081482B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E65AD1828213F3F0081482B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E65AD1A28213F3F0081482B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8083622F28423F5A00712B96 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		808362312842401100712B96 /* CalendarDitailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDitailViewController.swift; sourceTree = "<group>"; };
+		808362332842404F00712B96 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		80836235284240A700712B96 /* AddData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,7 @@
 		4E65AD0B28213F3E0081482B /* all-in-one */ = {
 			isa = PBXGroup;
 			children = (
+				8083622E28423F2500712B96 /* Calendar */,
 				4E47CCD1283F6E680097AA0B /* pairs */,
 				4E68D225283A06350021D183 /* tabs */,
 				4E65AD0C28213F3E0081482B /* AppDelegate.swift */,
@@ -119,6 +128,17 @@
 			children = (
 			);
 			path = tabs;
+			sourceTree = "<group>";
+		};
+		8083622E28423F2500712B96 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				8083622F28423F5A00712B96 /* CalendarViewController.swift */,
+				808362312842401100712B96 /* CalendarDitailViewController.swift */,
+				808362332842404F00712B96 /* AddViewController.swift */,
+				80836235284240A700712B96 /* AddData.swift */,
+			);
+			path = Calendar;
 			sourceTree = "<group>";
 		};
 		A9449FFF71A50D9D74098AA4 /* Pods */ = {
@@ -246,14 +266,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E47CCD3283F6E830097AA0B /* Manana.swift in Sources */,
+				80836236284240A700712B96 /* AddData.swift in Sources */,
+				808362322842401100712B96 /* CalendarDitailViewController.swift in Sources */,
 				4E65AD1128213F3E0081482B /* ViewController.swift in Sources */,
 				4E47CCD72841FA340097AA0B /* BTCKRW.swift in Sources */,
+				8083623028423F5A00712B96 /* CalendarViewController.swift in Sources */,
 				4E47CCD928422CA30097AA0B /* GOLD.swift in Sources */,
 				4E65AD0D28213F3E0081482B /* AppDelegate.swift in Sources */,
 				4E47CCD0283F659A0097AA0B /* Network.swift in Sources */,
 				4E47CCD5283F6FC40097AA0B /* BTCUSD.swift in Sources */,
 				4E47CCC8283A11DD0097AA0B /* Summary.swift in Sources */,
 				4E47CCCA283A137C0097AA0B /* SummaryTableViewCell.swift in Sources */,
+				808362342842404F00712B96 /* AddViewController.swift in Sources */,
 				4E65AD0F28213F3E0081482B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
