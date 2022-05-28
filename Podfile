@@ -5,7 +5,10 @@ target 'all-in-one' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for all-in-one
-  pod 'Alamofire', '~> 4.4'
+ 	
+pod 'FSCalendar'
+pod 'RealmSwift'
+pod 'CalculateCalendarLogic'
+pod 'Alamofire', '~>4.4'
 
 end
