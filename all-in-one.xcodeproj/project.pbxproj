@@ -7,15 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E47CCC8283A11DD0097AA0B /* Summary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCC7283A11DD0097AA0B /* Summary.swift */; };
+		4E47CCCA283A137C0097AA0B /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCC9283A137C0097AA0B /* SummaryTableViewCell.swift */; };
+		4E47CCD0283F659A0097AA0B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCCF283F659A0097AA0B /* Network.swift */; };
+		4E47CCD3283F6E830097AA0B /* Manana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCD2283F6E830097AA0B /* Manana.swift */; };
+		4E47CCD5283F6FC40097AA0B /* BTCUSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCD4283F6FC40097AA0B /* BTCUSD.swift */; };
+		4E47CCD72841FA340097AA0B /* BTCKRW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCD62841FA340097AA0B /* BTCKRW.swift */; };
+		4E47CCD928422CA30097AA0B /* GOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCD828422CA30097AA0B /* GOLD.swift */; };
 		4E65AD0D28213F3E0081482B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65AD0C28213F3E0081482B /* AppDelegate.swift */; };
 		4E65AD0F28213F3E0081482B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65AD0E28213F3E0081482B /* SceneDelegate.swift */; };
 		4E65AD1128213F3E0081482B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65AD1028213F3E0081482B /* ViewController.swift */; };
 		4E65AD1428213F3E0081482B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E65AD1228213F3E0081482B /* Main.storyboard */; };
 		4E65AD1628213F3F0081482B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E65AD1528213F3F0081482B /* Assets.xcassets */; };
 		4E65AD1928213F3F0081482B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E65AD1728213F3F0081482B /* LaunchScreen.storyboard */; };
+		9FA717ED2CEB9ABC93911D2A /* Pods_all_in_one.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3113E7EE47DD18936BD1999C /* Pods_all_in_one.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		061186E1C99E28B8C426FC47 /* Pods-all-in-one.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-all-in-one.debug.xcconfig"; path = "Target Support Files/Pods-all-in-one/Pods-all-in-one.debug.xcconfig"; sourceTree = "<group>"; };
+		3113E7EE47DD18936BD1999C /* Pods_all_in_one.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_all_in_one.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3282F7804BCE0809D3EEF749 /* Pods-all-in-one.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-all-in-one.release.xcconfig"; path = "Target Support Files/Pods-all-in-one/Pods-all-in-one.release.xcconfig"; sourceTree = "<group>"; };
+		4E47CCC7283A11DD0097AA0B /* Summary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Summary.swift; sourceTree = "<group>"; };
+		4E47CCC9283A137C0097AA0B /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
+		4E47CCCF283F659A0097AA0B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		4E47CCD2283F6E830097AA0B /* Manana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manana.swift; sourceTree = "<group>"; };
+		4E47CCD4283F6FC40097AA0B /* BTCUSD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCUSD.swift; sourceTree = "<group>"; };
+		4E47CCD62841FA340097AA0B /* BTCKRW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCKRW.swift; sourceTree = "<group>"; };
+		4E47CCD828422CA30097AA0B /* GOLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOLD.swift; sourceTree = "<group>"; };
+		4E47CCDA28423A750097AA0B /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		4E65AD0928213F3E0081482B /* all-in-one.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "all-in-one.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E65AD0C28213F3E0081482B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E65AD0E28213F3E0081482B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +50,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA717ED2CEB9ABC93911D2A /* Pods_all_in_one.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F04A1A71FC7D8329236825D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3113E7EE47DD18936BD1999C /* Pods_all_in_one.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4E47CCD1283F6E680097AA0B /* pairs */ = {
+			isa = PBXGroup;
+			children = (
+				4E47CCD2283F6E830097AA0B /* Manana.swift */,
+				4E47CCD4283F6FC40097AA0B /* BTCUSD.swift */,
+				4E47CCD62841FA340097AA0B /* BTCKRW.swift */,
+				4E47CCD828422CA30097AA0B /* GOLD.swift */,
+			);
+			path = pairs;
+			sourceTree = "<group>";
+		};
 		4E65AD0028213F3E0081482B = {
 			isa = PBXGroup;
 			children = (
+				4E47CCDA28423A750097AA0B /* .gitignore.md */,
 				4E65AD0B28213F3E0081482B /* all-in-one */,
 				4E65AD0A28213F3E0081482B /* Products */,
+				A9449FFF71A50D9D74098AA4 /* Pods */,
+				1F04A1A71FC7D8329236825D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +98,8 @@
 		4E65AD0B28213F3E0081482B /* all-in-one */ = {
 			isa = PBXGroup;
 			children = (
+				4E47CCD1283F6E680097AA0B /* pairs */,
+				4E68D225283A06350021D183 /* tabs */,
 				4E65AD0C28213F3E0081482B /* AppDelegate.swift */,
 				4E65AD0E28213F3E0081482B /* SceneDelegate.swift */,
 				4E65AD1028213F3E0081482B /* ViewController.swift */,
@@ -63,8 +107,27 @@
 				4E65AD1528213F3F0081482B /* Assets.xcassets */,
 				4E65AD1728213F3F0081482B /* LaunchScreen.storyboard */,
 				4E65AD1A28213F3F0081482B /* Info.plist */,
+				4E47CCC7283A11DD0097AA0B /* Summary.swift */,
+				4E47CCC9283A137C0097AA0B /* SummaryTableViewCell.swift */,
+				4E47CCCF283F659A0097AA0B /* Network.swift */,
 			);
 			path = "all-in-one";
+			sourceTree = "<group>";
+		};
+		4E68D225283A06350021D183 /* tabs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tabs;
+			sourceTree = "<group>";
+		};
+		A9449FFF71A50D9D74098AA4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				061186E1C99E28B8C426FC47 /* Pods-all-in-one.debug.xcconfig */,
+				3282F7804BCE0809D3EEF749 /* Pods-all-in-one.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E65AD1D28213F3F0081482B /* Build configuration list for PBXNativeTarget "all-in-one" */;
 			buildPhases = (
+				44043478458D40388E6C3DA8 /* [CP] Check Pods Manifest.lock */,
 				4E65AD0528213F3E0081482B /* Sources */,
 				4E65AD0628213F3E0081482B /* Frameworks */,
 				4E65AD0728213F3E0081482B /* Resources */,
+				8774DCEAD19B6111B1438E01 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,13 +198,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		44043478458D40388E6C3DA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-all-in-one-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8774DCEAD19B6111B1438E01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-all-in-one/Pods-all-in-one-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-all-in-one/Pods-all-in-one-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-all-in-one/Pods-all-in-one-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4E65AD0528213F3E0081482B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E47CCD3283F6E830097AA0B /* Manana.swift in Sources */,
 				4E65AD1128213F3E0081482B /* ViewController.swift in Sources */,
+				4E47CCD72841FA340097AA0B /* BTCKRW.swift in Sources */,
+				4E47CCD928422CA30097AA0B /* GOLD.swift in Sources */,
 				4E65AD0D28213F3E0081482B /* AppDelegate.swift in Sources */,
+				4E47CCD0283F659A0097AA0B /* Network.swift in Sources */,
+				4E47CCD5283F6FC40097AA0B /* BTCUSD.swift in Sources */,
+				4E47CCC8283A11DD0097AA0B /* Summary.swift in Sources */,
+				4E47CCCA283A137C0097AA0B /* SummaryTableViewCell.swift in Sources */,
 				4E65AD0F28213F3E0081482B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,11 +396,14 @@
 		};
 		4E65AD1E28213F3F0081482B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 061186E1C99E28B8C426FC47 /* Pods-all-in-one.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3LAXACJ89M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "all-in-one/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -301,19 +418,23 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "studio.all-in-one";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		4E65AD1F28213F3F0081482B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3282F7804BCE0809D3EEF749 /* Pods-all-in-one.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3LAXACJ89M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "all-in-one/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -328,9 +449,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "studio.all-in-one";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
