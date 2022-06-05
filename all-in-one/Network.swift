@@ -16,6 +16,7 @@ class Network {
         configuration.httpAdditionalHeaders = [:]
         configuration.httpAdditionalHeaders?["Accept"] = "application/json"
         configuration.httpAdditionalHeaders?["x-access-token"] = "goldapi-496zwwptl3ppdh6l-io"
+        configuration.httpAdditionalHeaders?["x-api-key"] = "FfVnCRjtlk4p5dJA5Wf668BbgAJKY2Ut5y70nALH"
         return Alamofire.SessionManager(configuration: configuration)
     }()
     

@@ -10,15 +10,20 @@ import Foundation
 class Summary {
     var title: String
     var value: String
+    var ticker: String
     var unit: String
     
-    init(_ title: String, _ value: String) {
+    init(_ title: String, _ value: String, _ ticker: String = "") {
         self.title = title
         self.value = value
+        self.ticker = ticker
         
+        if self.ticker == "" {
+            self.ticker = title
+        }
         switch title.suffix(3) {
-        case "USD":
-            self.unit = "$"
+        case "코스피":
+            self.unit = "point"
         case "EUR":
             self.unit = "€"
         case "KRW":
@@ -26,7 +31,7 @@ class Summary {
         case "JPY":
             self.unit = "¥"
         default:
-            self.unit = "point"
+            self.unit = "$"
         }
         
         if title == "김치프리미엄" {
@@ -37,4 +42,11 @@ class Summary {
             self.unit = "₩"
         }
     }
+}
+
+enum Market {
+    case KRX //국내주식
+    case NASDAQ //미국주식
+    case BINANCE //암호화폐
+    case FX //외환
 }

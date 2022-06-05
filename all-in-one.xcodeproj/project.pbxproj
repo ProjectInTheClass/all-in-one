@@ -14,12 +14,17 @@
 		4E47CCD5283F6FC40097AA0B /* BTCUSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCD4283F6FC40097AA0B /* BTCUSD.swift */; };
 		4E47CCD72841FA340097AA0B /* BTCKRW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCD62841FA340097AA0B /* BTCKRW.swift */; };
 		4E47CCD928422CA30097AA0B /* GOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCD828422CA30097AA0B /* GOLD.swift */; };
+		4E47CCDC284243E00097AA0B /* YF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCDB284243E00097AA0B /* YF.swift */; };
 		4E65AD0D28213F3E0081482B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65AD0C28213F3E0081482B /* AppDelegate.swift */; };
 		4E65AD0F28213F3E0081482B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65AD0E28213F3E0081482B /* SceneDelegate.swift */; };
 		4E65AD1128213F3E0081482B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65AD1028213F3E0081482B /* ViewController.swift */; };
 		4E65AD1428213F3E0081482B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E65AD1228213F3E0081482B /* Main.storyboard */; };
 		4E65AD1628213F3F0081482B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E65AD1528213F3F0081482B /* Assets.xcassets */; };
 		4E65AD1928213F3F0081482B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E65AD1728213F3F0081482B /* LaunchScreen.storyboard */; };
+		4E8EAE8628487FFD00906A1D /* AllDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8EAE8528487FFD00906A1D /* AllDataController.swift */; };
+		4E8EAE882848AF6000906A1D /* Index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8EAE872848AF6000906A1D /* Index.swift */; };
+		4E98C45C284B7743004E690B /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C45B284B7743004E690B /* Stock.swift */; };
+		4E98C45E284B7E61004E690B /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C45D284B7E61004E690B /* ChartViewController.swift */; };
 		9FA717ED2CEB9ABC93911D2A /* Pods_all_in_one.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3113E7EE47DD18936BD1999C /* Pods_all_in_one.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +40,7 @@
 		4E47CCD62841FA340097AA0B /* BTCKRW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCKRW.swift; sourceTree = "<group>"; };
 		4E47CCD828422CA30097AA0B /* GOLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOLD.swift; sourceTree = "<group>"; };
 		4E47CCDA28423A750097AA0B /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
+		4E47CCDB284243E00097AA0B /* YF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YF.swift; sourceTree = "<group>"; };
 		4E65AD0928213F3E0081482B /* all-in-one.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "all-in-one.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E65AD0C28213F3E0081482B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E65AD0E28213F3E0081482B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,10 @@
 		4E65AD1528213F3F0081482B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E65AD1828213F3F0081482B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E65AD1A28213F3F0081482B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E8EAE8528487FFD00906A1D /* AllDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDataController.swift; sourceTree = "<group>"; };
+		4E8EAE872848AF6000906A1D /* Index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Index.swift; sourceTree = "<group>"; };
+		4E98C45B284B7743004E690B /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		4E98C45D284B7E61004E690B /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +82,9 @@
 				4E47CCD4283F6FC40097AA0B /* BTCUSD.swift */,
 				4E47CCD62841FA340097AA0B /* BTCKRW.swift */,
 				4E47CCD828422CA30097AA0B /* GOLD.swift */,
+				4E47CCDB284243E00097AA0B /* YF.swift */,
+				4E8EAE872848AF6000906A1D /* Index.swift */,
+				4E98C45B284B7743004E690B /* Stock.swift */,
 			);
 			path = pairs;
 			sourceTree = "<group>";
@@ -98,6 +111,7 @@
 		4E65AD0B28213F3E0081482B /* all-in-one */ = {
 			isa = PBXGroup;
 			children = (
+				4E8EAE8428487FB000906A1D /* main */,
 				4E47CCD1283F6E680097AA0B /* pairs */,
 				4E68D225283A06350021D183 /* tabs */,
 				4E65AD0C28213F3E0081482B /* AppDelegate.swift */,
@@ -119,6 +133,15 @@
 			children = (
 			);
 			path = tabs;
+			sourceTree = "<group>";
+		};
+		4E8EAE8428487FB000906A1D /* main */ = {
+			isa = PBXGroup;
+			children = (
+				4E8EAE8528487FFD00906A1D /* AllDataController.swift */,
+				4E98C45D284B7E61004E690B /* ChartViewController.swift */,
+			);
+			path = main;
 			sourceTree = "<group>";
 		};
 		A9449FFF71A50D9D74098AA4 /* Pods */ = {
@@ -246,15 +269,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E47CCD3283F6E830097AA0B /* Manana.swift in Sources */,
+				4E8EAE8628487FFD00906A1D /* AllDataController.swift in Sources */,
+				4E47CCDC284243E00097AA0B /* YF.swift in Sources */,
 				4E65AD1128213F3E0081482B /* ViewController.swift in Sources */,
+				4E8EAE882848AF6000906A1D /* Index.swift in Sources */,
 				4E47CCD72841FA340097AA0B /* BTCKRW.swift in Sources */,
 				4E47CCD928422CA30097AA0B /* GOLD.swift in Sources */,
 				4E65AD0D28213F3E0081482B /* AppDelegate.swift in Sources */,
 				4E47CCD0283F659A0097AA0B /* Network.swift in Sources */,
 				4E47CCD5283F6FC40097AA0B /* BTCUSD.swift in Sources */,
+				4E98C45C284B7743004E690B /* Stock.swift in Sources */,
 				4E47CCC8283A11DD0097AA0B /* Summary.swift in Sources */,
 				4E47CCCA283A137C0097AA0B /* SummaryTableViewCell.swift in Sources */,
 				4E65AD0F28213F3E0081482B /* SceneDelegate.swift in Sources */,
+				4E98C45E284B7E61004E690B /* ChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

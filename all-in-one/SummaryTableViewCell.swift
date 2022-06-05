@@ -13,6 +13,7 @@ class SummaryTableViewCell: UITableViewCell {
     @IBOutlet var cellTitle: UILabel!
     @IBOutlet var cellValue: UILabel!
     @IBOutlet var cellUnit: UILabel!
+    var cellTicker: String!
     
     override func awakeFromNib() {
         super.awakeFromNib()
