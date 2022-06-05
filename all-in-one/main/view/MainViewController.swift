@@ -6,16 +6,25 @@
 //
 
 import UIKit
+import Alamofire
 import Toast_Swift
 
 class MainViewController: UIViewController {
-    var items: [Summary] = []
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var Btn_All: UIButton!
+    
+    var items: [Summary] = []
     let defaults = UserDefaults.standard
     
+    override func viewWillDisappear(_ animated: Bool) {
+        items = []
+        tableView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
         
         if isFirstTime() {
             self.view.makeToast("즐겨찾기 종목을 등록하면 바로 확인할 수 있어요!", duration: 1.0, position: .center)
@@ -45,7 +54,18 @@ class MainViewController: UIViewController {
     
     func getData(ticker: String){
         let client = ApiClient2(controller: self)
-        client.getDataFromBitfinex(name: ticker)
+        
+        if(ticker == "USDKRW") {
+            let param_usdkrw: Parameters = [
+                "base": "KRW",
+                "code": "USD"
+            ]
+            client.getDataFromManana(name: "USDKRW", parameters: param_usdkrw)
+        }
+        
+        else if(ticker == "BTCUSD"){
+            client.getDataFromBitfinex(name: ticker)
+        }
     }
 }
 

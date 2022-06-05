@@ -8,10 +8,11 @@
 import UIKit
 
 class StarredCell: UITableViewCell {
-
+    
     @IBOutlet weak var starTitle: UILabel!
     @IBOutlet weak var starPrice: UILabel!
     @IBOutlet weak var starUnit: UILabel!
+    
     var cellTicker: String!
     
     override func awakeFromNib() {

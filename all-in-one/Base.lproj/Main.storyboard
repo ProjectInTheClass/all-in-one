@@ -172,9 +172,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="StarCell" destination="yNA-ue-x3V" id="kpj-Gx-IDn"/>
-                                            <outlet property="StarPrice" destination="DzA-d8-vpe" id="FBl-w0-DH1"/>
-                                            <outlet property="StarUnit" destination="aNd-Gi-sOQ" id="pl4-jv-YsB"/>
+                                            <outlet property="starPrice" destination="DzA-d8-vpe" id="a2T-5Y-5qH"/>
+                                            <outlet property="starTitle" destination="yNA-ue-x3V" id="Unj-lR-tjz"/>
+                                            <outlet property="starUnit" destination="aNd-Gi-sOQ" id="lnT-hC-gVF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -202,7 +202,7 @@
                     <navigationItem key="navigationItem" id="yEV-f4-en9"/>
                     <connections>
                         <outlet property="Btn_All" destination="KoM-yd-QeR" id="xeJ-4Y-tlH"/>
-                        <outlet property="tableView" destination="vxU-wg-CXs" id="g59-Xe-cOR"/>
+                        <outlet property="tableView" destination="vxU-wg-CXs" id="ycT-2Q-YzY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
