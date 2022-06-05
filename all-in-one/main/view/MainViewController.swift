@@ -43,6 +43,33 @@ class MainViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let chartViewController: ChartViewController = segue.destination as? ChartViewController else {
+            return
+        }
+        
+        guard let sender: StarredCell = sender as? StarredCell else {
+            return
+        }
+                
+        switch (sender.cellTicker){
+            case "^HSI":
+                chartViewController.ticker = "HSI"
+            case "^DJT":
+                chartViewController.ticker = "DJI"
+            case "^IXIC":
+                chartViewController.ticker = "NASDAQ"
+            case "^KS11":
+                chartViewController.ticker = "KOSPI|12M"
+            case "금(GOLD)":
+                chartViewController.ticker = "GOLD"
+            case "은(SILVER)":
+                chartViewController.ticker = "SILVER"
+            default:
+            chartViewController.ticker = sender.cellTicker
+        }
+    }
+    
     func isFirstTime() -> Bool {
             if defaults.object(forKey: "star-index") == nil {
                 defaults.set([], forKey:"star-index")
@@ -63,8 +90,45 @@ class MainViewController: UIViewController {
             client.getDataFromManana(name: "USDKRW", parameters: param_usdkrw)
         }
         
+        else if(ticker == "JPYKRW") {
+            let param_jpykrw: Parameters = [
+                "base": "KRW",
+                "code": "JPY"
+            ]
+            client.getDataFromManana(name: "JPYKRW", parameters: param_jpykrw)
+        }
+        
+        else if(ticker == "EURKRW") {
+            let param_eurkrw: Parameters = [
+                "base": "KRW",
+                "code": "EUR"
+            ]
+            client.getDataFromManana(name: "EURKRW", parameters: param_eurkrw)
+        }
+        
         else if(ticker == "BTCUSD"){
             client.getDataFromBitfinex(name: ticker)
+        }
+        
+        else if(ticker == "BTCKRW"){
+            let param_upbit: Parameters = [
+                "markets": "KRW-BTC"
+            ]
+            client.getDataFromUpbit(name: "BTCKRW", parameters: param_upbit)
+        }
+        
+        else if(ticker == "금(GOLD)" || ticker == "은(SILVER)") {
+            client.getDataFromGoldAPI(name: ticker)
+        }
+        
+        else if(ticker == "김치프리미엄"){
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
+                client.getKorPremium(name: "김치프리미엄", kimp: client.kimp)
+            }
+        }
+        
+        else {
+            client.getDataFromFinancialModeling(tickers:ticker)
         }
     }
 }

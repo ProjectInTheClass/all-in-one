@@ -57,8 +57,10 @@ class AllDataController: UIViewController {
         client.getDataFromGoldAPI(name: "금(GOLD)")
         client.getDataFromGoldAPI(name: "은(SILVER)")
         
-        // Index
+        //Index
         client.getDataFromFinancialModeling(tickers:"index")
+        
+        //Stocks
         client.getDataFromFinancialModeling(tickers:"AAPL,MSFT,GOOG,AMZN,FB,TSLA,NVDA,PYPL,ASML")
 
         
