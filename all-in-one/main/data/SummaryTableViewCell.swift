@@ -9,7 +9,7 @@ import UIKit
 
 class SummaryTableViewCell: UITableViewCell {
 
-    
+    @IBOutlet var cellStar: UIButton!
     @IBOutlet var cellTitle: UILabel!
     @IBOutlet var cellValue: UILabel!
     @IBOutlet var cellUnit: UILabel!
@@ -22,8 +22,10 @@ class SummaryTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
+    @IBAction func saveStatus(_ sender: UIButton) {
+        sender.isSelected.toggle()
+        UserDefaults.standard.set(sender.isSelected, forKey:cellTicker)
+    }
 }

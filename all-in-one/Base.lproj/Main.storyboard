@@ -42,7 +42,7 @@
                                                             </state>
                                                             <state key="selected" image="star.fill" catalog="system"/>
                                                             <connections>
-                                                                <action selector="toggleButton:" destination="qFx-L4-UCi" eventType="touchUpInside" id="SYv-j4-k4a"/>
+                                                                <action selector="saveStatus:" destination="vm5-3s-KJg" eventType="touchUpInside" id="P1c-cT-opc"/>
                                                             </connections>
                                                         </button>
                                                         <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="y2e-6X-0Df">
@@ -92,6 +92,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="cellStar" destination="bd9-Ih-J8z" id="h33-I3-BeD"/>
                                             <outlet property="cellTitle" destination="Lvr-BQ-lS7" id="LV4-CX-XL5"/>
                                             <outlet property="cellUnit" destination="QiS-Gd-eG6" id="5ez-cn-alh"/>
                                             <outlet property="cellValue" destination="ZO1-vm-ffz" id="GMe-2D-MDd"/>
@@ -113,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="2423" y="93"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="all_in_one" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="all_in_one" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,9 +137,47 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vxU-wg-CXs">
-                                <rect key="frame" x="40" y="150" width="309" height="128"/>
+                                <rect key="frame" x="40" y="150" width="309" height="509"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StarredCell" rowHeight="104" id="gAc-NQ-viF" customClass="StarredCell" customModule="all_in_one" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="309" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gAc-NQ-viF" id="mff-V1-QQA">
+                                            <rect key="frame" x="0.0" y="0.0" width="309" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2730" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzA-d8-vpe">
+                                                    <rect key="frame" x="16" y="27" width="89" height="61"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNd-Gi-sOQ">
+                                                    <rect key="frame" x="105" y="47" width="39" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="코스피" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNA-ue-x3V">
+                                                    <rect key="frame" x="16" y="11" width="45" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="StarCell" destination="yNA-ue-x3V" id="kpj-Gx-IDn"/>
+                                            <outlet property="StarPrice" destination="DzA-d8-vpe" id="FBl-w0-DH1"/>
+                                            <outlet property="StarUnit" destination="aNd-Gi-sOQ" id="pl4-jv-YsB"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoM-yd-QeR">
                                 <rect key="frame" x="69" y="690" width="250" height="31"/>
@@ -163,11 +202,12 @@
                     <navigationItem key="navigationItem" id="yEV-f4-en9"/>
                     <connections>
                         <outlet property="Btn_All" destination="KoM-yd-QeR" id="xeJ-4Y-tlH"/>
+                        <outlet property="tableView" destination="vxU-wg-CXs" id="g59-Xe-cOR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1598" y="93"/>
+            <point key="canvasLocation" x="1596.9230769230769" y="92.417061611374407"/>
         </scene>
         <!--Chart View Controller-->
         <scene sceneID="2AR-8k-Yy2">

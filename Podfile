@@ -6,6 +6,8 @@ target 'all-in-one' do
   use_frameworks!
 
   # Pods for all-in-one
+  # Almaofire
   pod 'Alamofire', '~> 4.4'
-
+  # Toast
+  pod 'Toast-Swift', '~> 5.0.1'
 end

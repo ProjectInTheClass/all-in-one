@@ -10,12 +10,9 @@ import Alamofire
 
 class AllDataController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    
     var items: [Summary] = []
     
-    @IBAction func toggleButton(_ sender: UIButton) {
-      sender.isSelected.toggle()
-    }
+    let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,6 +94,17 @@ class AllDataController: UIViewController {
                 chartViewController.ticker = sender.cellTicker
         }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        var starred: [String] = []
+        
+        for item in items {
+            if defaults.bool(forKey: item.ticker) {
+                starred.append(item.ticker)
+            }
+        }
+        defaults.set(starred, forKey:"star-index")
+    }
 }
 
 extension AllDataController : UITableViewDataSource {
@@ -112,6 +120,7 @@ extension AllDataController : UITableViewDataSource {
         cell.cellUnit.text = items[indexPath.row].unit
         cell.cellValue.text = items[indexPath.row].value
         cell.cellTicker = items[indexPath.row].ticker
+        cell.cellStar.isSelected = defaults.bool(forKey: cell.cellTicker)
         
         return cell
     }
@@ -122,4 +131,3 @@ extension AllDataController : UITableViewDelegate{
         print(indexPath.row)
     }
 }
-
