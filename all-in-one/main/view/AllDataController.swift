@@ -10,16 +10,28 @@ import Alamofire
 
 class AllDataController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    var items: [Summary] = []
+    @IBOutlet weak var searchBar: UISearchBar!
     
+    var items: [Summary] = []
+    var backups: [Summary] = []
     let defaults = UserDefaults.standard
 
+    func setupTableView() {
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+    
+    func setupSearchBar() {
+        self.searchBar.delegate = self
+        self.searchBar.placeholder = "종목 검색"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "모든 데이터"
         
-        tableView.dataSource = self
-        tableView.delegate = self
+        setupTableView()
+        setupSearchBar()
         
         let client = ApiClient(controller: self)
         
@@ -67,6 +79,7 @@ class AllDataController: UIViewController {
         // BTC Korean Premium
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
             client.getKorPremium(name: "김치프리미엄", kimp: client.kimp)
+            self.backups = self.items
         }
     }
     
@@ -131,5 +144,38 @@ extension AllDataController : UITableViewDataSource {
 extension AllDataController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+    }
+}
+
+extension AllDataController : UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+
+        tableView.reloadData()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = true
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.searchBar.showsCancelButton = false
+        self.searchBar.text = ""
+        self.searchBar.resignFirstResponder()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if self.searchBar.text == "" {
+            items = backups
+            tableView.reloadData()
+        }
+        else{
+            items = items.filter{
+                $0.title.range(of: self.searchBar.text!, options: .caseInsensitive) != nil
+            }
+            
+            tableView.reloadData()
+        }
+        
+        print("search text: ", self.searchBar.text)
     }
 }

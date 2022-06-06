@@ -119,7 +119,7 @@
 		4E65AD0B28213F3E0081482B /* all-in-one */ = {
 			isa = PBXGroup;
 			children = (
-				80178E53284DC8F00008B13B /* Calendar */,
+				80178E53284DC8F00008B13B /* calendar */,
 				4E8EAE8428487FB000906A1D /* main */,
 				4E47CCD1283F6E680097AA0B /* pairs */,
 				4E65AD0C28213F3E0081482B /* AppDelegate.swift */,
@@ -172,12 +172,12 @@
 			path = data;
 			sourceTree = "<group>";
 		};
-		80178E53284DC8F00008B13B /* Calendar */ = {
+		80178E53284DC8F00008B13B /* calendar */ = {
 			isa = PBXGroup;
 			children = (
 				80178E54284DC9550008B13B /* CalendarViewController.swift */,
 			);
-			path = Calendar;
+			path = calendar;
 			sourceTree = "<group>";
 		};
 		A9449FFF71A50D9D74098AA4 /* Pods */ = {
