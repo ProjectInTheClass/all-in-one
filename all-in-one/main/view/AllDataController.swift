@@ -74,6 +74,12 @@ class AllDataController: UIViewController {
         
         //Stocks
         client.getDataFromFinancialModeling(tickers:"AAPL,MSFT,GOOG,AMZN,FB,TSLA,NVDA,PYPL,ASML")
+        
+        //Korean Stocks
+        let param_korea: Parameters = [
+            "symbols": "005930.KS,373220.KS,000660.KS,051915.KS,035420.KS,005380.KS,035720.KS,000270.KS,068270.KS,005490.KS"
+        ]
+        client.getDataFromYahooFinance(parameters: param_korea)
 
         
         // BTC Korean Premium
@@ -154,7 +160,6 @@ extension AllDataController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         tableView.reloadData()
         searchBarSearchButtonClicked(searchBar)
-        
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
@@ -179,7 +184,5 @@ extension AllDataController : UISearchBarDelegate {
             }
             tableView.reloadData()
         }
-        
-        print("search text: ", self.searchBar.text)
     }
 }

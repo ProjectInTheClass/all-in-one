@@ -14,7 +14,7 @@ struct IndexElement: Codable {
     let marketCap: JSONNull?
     let priceAvg50, priceAvg200: Double
     let volume, avgVolume: Int
-    let exchange: Exchange
+    let exchange: Exchange1
     let indexOpen, previousClose: Double
     let eps, pe, earningsAnnouncement, sharesOutstanding: JSONNull?
     let timestamp: Int
@@ -26,7 +26,7 @@ struct IndexElement: Codable {
     }
 }
 
-enum Exchange: String, Codable {
+enum Exchange1: String, Codable {
     case index = "INDEX"
 }
 

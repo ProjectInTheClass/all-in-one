@@ -86,7 +86,7 @@ class Summary {
     }
 }
 
-enum Market {
+enum MarketType {
     case KRX //국내주식
     case NASDAQ //미국주식
     case BINANCE //암호화폐

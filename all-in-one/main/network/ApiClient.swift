@@ -77,19 +77,17 @@ class ApiClient {
         })
     }
 
-    func getDataFromYahooFinance(name: String, parameters: Parameters = [:], _ korean: Bool = false){
+    func getDataFromYahooFinance(parameters: Parameters = [:]){
         Network.shared.getAPIData(url: "https://yfapi.net/v6/finance/quote", parameters: parameters, completion: { (data) -> (Void) in
             do {
                 let res = try JSONDecoder().decode(Yf.self, from : data)
-                print("ppp: \(res.quoteResponse.result[0].regularMarketPrice)")
                 
-                let summary = Summary(name, String(format: "%.2f", res.quoteResponse.result[0].regularMarketPrice))
-                
-                if korean {
+                for i in res.quoteResponse.result{
+                    let summary = Summary(i.shortName, String(i.regularMarketPrice), "₩")
                     summary.unit = "₩"
+                    self.controller.items.append(summary)
                 }
                 
-                self.controller.items.append(summary)
                 self.controller.tableView.reloadData()
             }catch {
                 print(error)
