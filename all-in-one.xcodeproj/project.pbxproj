@@ -119,6 +119,7 @@
 		4E65AD0B28213F3E0081482B /* all-in-one */ = {
 			isa = PBXGroup;
 			children = (
+				80178E53284DC8F00008B13B /* Calendar */,
 				4E8EAE8428487FB000906A1D /* main */,
 				4E47CCD1283F6E680097AA0B /* pairs */,
 				4E65AD0C28213F3E0081482B /* AppDelegate.swift */,
@@ -134,7 +135,6 @@
 		4E8EAE8428487FB000906A1D /* main */ = {
 			isa = PBXGroup;
 			children = (
-				80178E53284DC8F00008B13B /* Calendar */,
 				4E98C465284C95D9004E690B /* data */,
 				4E98C464284C95AF004E690B /* view */,
 				4E98C463284C959A004E690B /* network */,
