@@ -322,7 +322,7 @@
             </objects>
             <point key="canvasLocation" x="808" y="93"/>
         </scene>
-        <!--Events-->
+        <!--캘린더-->
         <scene sceneID="gwz-2Z-9Ba">
             <objects>
                 <viewController id="hFD-UJ-Eha" customClass="CalendarViewController" customModule="all_in_one" customModuleProvider="target" sceneMemberID="viewController">
@@ -332,7 +332,7 @@
                         <viewLayoutGuide key="safeArea" id="bHh-7G-7xK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Events" id="SuK-8x-Aw3"/>
+                    <navigationItem key="navigationItem" title="캘린더" id="SuK-8x-Aw3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9F9-bB-kgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -359,8 +359,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dvC-rc-Plu"/>
-        <segue reference="b7V-TO-aAN"/>
+        <segue reference="fzc-9A-Ynx"/>
+        <segue reference="aKp-gW-AVN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
