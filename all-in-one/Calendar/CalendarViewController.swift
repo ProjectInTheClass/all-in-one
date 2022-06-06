@@ -25,14 +25,14 @@ class CalendarViewController: UIViewController, EKEventEditViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "캘린더"
+        navigationItem.title = "뉴스 캘린더"
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(didTapAdd))
         self.economyTable.delegate = self
         self.economyTable.dataSource = self
         
         NewsApi(controller: self).getDataFromNewsApi()
+        
     }
-    
     @objc func didTapAdd(){
         store.requestAccess(to: .event) { [weak self] success, error in
             if success, error == nil{
@@ -58,6 +58,7 @@ class CalendarViewController: UIViewController, EKEventEditViewDelegate {
 
 extension CalendarViewController : UITableViewDelegate, UITableViewDataSource, SFSafariViewControllerDelegate{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return ecoItems.count
     }
     

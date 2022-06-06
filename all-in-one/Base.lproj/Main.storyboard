@@ -204,6 +204,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="모든 데이터 보기                                 &gt; ">
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="qFx-L4-UCi" kind="show" id="aKp-gW-AVN"/>
@@ -339,10 +340,10 @@
             </objects>
             <point key="canvasLocation" x="808" y="93"/>
         </scene>
-        <!--캘린더-->
+        <!--뉴스 캘린더-->
         <scene sceneID="gwz-2Z-9Ba">
             <objects>
-                <viewController id="hFD-UJ-Eha" customClass="CalendarViewController" customModule="all_in_one" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="뉴스 캘린더" id="hFD-UJ-Eha" customClass="CalendarViewController" customModule="all_in_one" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vqe-xg-mpZ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -385,7 +386,7 @@
                         <viewLayoutGuide key="safeArea" id="bHh-7G-7xK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="캘린더" id="SuK-8x-Aw3"/>
+                    <navigationItem key="navigationItem" title="뉴스 캘린더" id="SuK-8x-Aw3"/>
                     <connections>
                         <outlet property="economyTable" destination="Zvu-h7-ocT" id="dX0-8Z-C5a"/>
                     </connections>
@@ -394,12 +395,19 @@
             </objects>
             <point key="canvasLocation" x="1801.5384615384614" y="1522.7488151658767"/>
         </scene>
-        <!--뉴스 캘린더-->
+        <!--뉴스캘린더-->
         <scene sceneID="NpQ-JH-hCN">
             <objects>
-                <navigationController title="뉴스 캘린더" automaticallyAdjustsScrollViewInsets="NO" id="gv9-mV-NRA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="뉴스 캘린더" id="aPs-yy-mDi">
-                        <imageReference key="image" image="calendar" catalog="system" symbolScale="large"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gv9-mV-NRA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="뉴스캘린더" landscapeImage="calendar.badge.plus" catalog="system" id="kaa-2D-ghe">
+                        <imageReference key="image" image="calendar.badge.plus" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemRedColor"/>
+                                <color systemColor="systemRedColor"/>
+                                <color systemColor="systemRedColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <color key="badgeColor" systemColor="systemRedColor"/>
                         <imageReference key="selectedImage" image="calendar.badge.plus" catalog="system" renderingMode="hierarchical">
                             <hierarchicalColors>
                                 <color systemColor="systemRedColor"/>
@@ -409,11 +417,16 @@
                         </imageReference>
                     </tabBarItem>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hWZ-Nx-wW0">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -431,7 +444,6 @@
         <segue reference="aKp-gW-AVN"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="calendar.badge.plus" catalog="system" width="128" height="108"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
@@ -443,6 +455,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
