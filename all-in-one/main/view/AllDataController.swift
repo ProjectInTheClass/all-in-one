@@ -14,6 +14,8 @@ class AllDataController: UIViewController {
     
     var items: [Summary] = []
     var backups: [Summary] = []
+    var subBackups: [Summary] = []
+    
     let defaults = UserDefaults.standard
 
     func setupTableView() {
@@ -31,7 +33,6 @@ class AllDataController: UIViewController {
         self.title = "모든 데이터"
         
         setupTableView()
-        setupSearchBar()
         
         let client = ApiClient(controller: self)
         
@@ -79,7 +80,10 @@ class AllDataController: UIViewController {
         // BTC Korean Premium
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
             client.getKorPremium(name: "김치프리미엄", kimp: client.kimp)
-            self.backups = self.items
+            if(self.backups.isEmpty){
+                self.backups = self.items
+            }
+            self.setupSearchBar()
         }
     }
     
@@ -149,8 +153,9 @@ extension AllDataController : UITableViewDelegate{
 
 extension AllDataController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-
         tableView.reloadData()
+        searchBarSearchButtonClicked(searchBar)
+        
     }
     
     func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
@@ -169,10 +174,9 @@ extension AllDataController : UISearchBarDelegate {
             tableView.reloadData()
         }
         else{
-            items = items.filter{
+            items = backups.filter{
                 $0.title.range(of: self.searchBar.text!, options: .caseInsensitive) != nil
             }
-            
             tableView.reloadData()
         }
         
