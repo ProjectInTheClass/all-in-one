@@ -174,7 +174,8 @@ extension AllDataController : UISearchBarDelegate {
         }
         else{
             items = backups.filter{
-                $0.title.range(of: self.searchBar.text!, options: .caseInsensitive) != nil
+                ($0.title.range(of: self.searchBar.text!, options: .caseInsensitive) != nil)
+            } + backups.filter{($0.titleKr.range(of: self.searchBar.text!, options: .caseInsensitive) != nil)
             }
             tableView.reloadData()
         }
