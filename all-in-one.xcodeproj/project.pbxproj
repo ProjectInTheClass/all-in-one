@@ -28,6 +28,10 @@
 		4E98C460284C7960004E690B /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C45F284C7960004E690B /* ApiClient.swift */; };
 		4E98C462284C9379004E690B /* StarredCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C461284C9379004E690B /* StarredCell.swift */; };
 		4E98C467284C9908004E690B /* ApiClient2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C466284C9908004E690B /* ApiClient2.swift */; };
+		4E98C46B284E041B004E690B /* NewsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C46A284E041B004E690B /* NewsApi.swift */; };
+		4E98C46E284E0549004E690B /* EconomyNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C46D284E0549004E690B /* EconomyNews.swift */; };
+		4E98C470284E05DB004E690B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C46F284E05DB004E690B /* News.swift */; };
+		4E98C472284E125C004E690B /* NewsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C471284E125C004E690B /* NewsCellTableViewCell.swift */; };
 		80178E55284DC9550008B13B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178E54284DC9550008B13B /* CalendarViewController.swift */; };
 		9FA717ED2CEB9ABC93911D2A /* Pods_all_in_one.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3113E7EE47DD18936BD1999C /* Pods_all_in_one.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +66,10 @@
 		4E98C466284C9908004E690B /* ApiClient2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient2.swift; sourceTree = "<group>"; };
 		4E98C468284DF628004E690B /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		4E98C469284DF628004E690B /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		4E98C46A284E041B004E690B /* NewsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApi.swift; sourceTree = "<group>"; };
+		4E98C46D284E0549004E690B /* EconomyNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomyNews.swift; sourceTree = "<group>"; };
+		4E98C46F284E05DB004E690B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		4E98C471284E125C004E690B /* NewsCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellTableViewCell.swift; sourceTree = "<group>"; };
 		80178E54284DC9550008B13B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +155,7 @@
 		4E98C463284C959A004E690B /* network */ = {
 			isa = PBXGroup;
 			children = (
+				4E98C46A284E041B004E690B /* NewsApi.swift */,
 				4E98C45F284C7960004E690B /* ApiClient.swift */,
 				4E47CCCF283F659A0097AA0B /* Network.swift */,
 				4E98C466284C9908004E690B /* ApiClient2.swift */,
@@ -174,10 +183,21 @@
 			path = data;
 			sourceTree = "<group>";
 		};
+		4E98C46C284E0532004E690B /* data */ = {
+			isa = PBXGroup;
+			children = (
+				4E98C46D284E0549004E690B /* EconomyNews.swift */,
+				4E98C46F284E05DB004E690B /* News.swift */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
 		80178E53284DC8F00008B13B /* calendar */ = {
 			isa = PBXGroup;
 			children = (
+				4E98C46C284E0532004E690B /* data */,
 				80178E54284DC9550008B13B /* CalendarViewController.swift */,
+				4E98C471284E125C004E690B /* NewsCellTableViewCell.swift */,
 			);
 			path = calendar;
 			sourceTree = "<group>";
@@ -313,17 +333,21 @@
 				4E47CCDC284243E00097AA0B /* YF.swift in Sources */,
 				4E98C460284C7960004E690B /* ApiClient.swift in Sources */,
 				4E65AD1128213F3E0081482B /* MainViewController.swift in Sources */,
+				4E98C470284E05DB004E690B /* News.swift in Sources */,
+				4E98C472284E125C004E690B /* NewsCellTableViewCell.swift in Sources */,
 				4E98C467284C9908004E690B /* ApiClient2.swift in Sources */,
 				4E8EAE882848AF6000906A1D /* Index.swift in Sources */,
 				4E47CCD72841FA340097AA0B /* BTCKRW.swift in Sources */,
 				4E47CCD928422CA30097AA0B /* GOLD.swift in Sources */,
 				80178E55284DC9550008B13B /* CalendarViewController.swift in Sources */,
+				4E98C46B284E041B004E690B /* NewsApi.swift in Sources */,
 				4E65AD0D28213F3E0081482B /* AppDelegate.swift in Sources */,
 				4E47CCD0283F659A0097AA0B /* Network.swift in Sources */,
 				4E47CCD5283F6FC40097AA0B /* BTCUSD.swift in Sources */,
 				4E98C45C284B7743004E690B /* Stock.swift in Sources */,
 				4E47CCC8283A11DD0097AA0B /* Summary.swift in Sources */,
 				4E47CCCA283A137C0097AA0B /* SummaryTableViewCell.swift in Sources */,
+				4E98C46E284E0549004E690B /* EconomyNews.swift in Sources */,
 				4E65AD0F28213F3E0081482B /* SceneDelegate.swift in Sources */,
 				4E98C45E284B7E61004E690B /* ChartViewController.swift in Sources */,
 			);
