@@ -274,6 +274,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="4d0-VN-XkY" kind="relationship" relationship="viewControllers" id="VpV-nO-h9A"/>
@@ -303,11 +304,27 @@
             </objects>
             <point key="canvasLocation" x="2640" y="-591"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--모아보기-->
         <scene sceneID="q2n-3k-hsk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4d0-VN-XkY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="topRated" id="Hxi-XG-3FR"/>
+                    <tabBarItem key="tabBarItem" title="모아보기" landscapeImage="star.fill" catalog="system" id="Hxi-XG-3FR">
+                        <imageReference key="image" image="star.fill" catalog="system" symbolScale="default" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemYellowColor"/>
+                                <color systemColor="systemYellowColor"/>
+                                <color systemColor="systemYellowColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                        <color key="badgeColor" systemColor="systemYellowColor"/>
+                        <imageReference key="selectedImage" image="star.fill" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemYellowColor"/>
+                                <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RPy-mF-eT1">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -370,22 +387,34 @@
                     </view>
                     <navigationItem key="navigationItem" title="캘린더" id="SuK-8x-Aw3"/>
                     <connections>
-                        <outlet property="economyTable" destination="Zvu-h7-ocT" id="QG0-fz-QKL"/>
+                        <outlet property="economyTable" destination="Zvu-h7-ocT" id="dX0-8Z-C5a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9F9-bB-kgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1801.5384615384614" y="1522.7488151658767"/>
         </scene>
-        <!--Item-->
+        <!--뉴스 캘린더-->
         <scene sceneID="NpQ-JH-hCN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gv9-mV-NRA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aPs-yy-mDi"/>
+                <navigationController title="뉴스 캘린더" automaticallyAdjustsScrollViewInsets="NO" id="gv9-mV-NRA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="뉴스 캘린더" id="aPs-yy-mDi">
+                        <imageReference key="image" image="calendar" catalog="system" symbolScale="large"/>
+                        <imageReference key="selectedImage" image="calendar.badge.plus" catalog="system" renderingMode="hierarchical">
+                            <hierarchicalColors>
+                                <color systemColor="systemRedColor"/>
+                                <color systemColor="systemRedColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hWZ-Nx-wW0">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -402,6 +431,8 @@
         <segue reference="aKp-gW-AVN"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="calendar.badge.plus" catalog="system" width="128" height="108"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
@@ -413,8 +444,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

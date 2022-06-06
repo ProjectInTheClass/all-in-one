@@ -32,7 +32,7 @@
 		4E98C46E284E0549004E690B /* EconomyNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C46D284E0549004E690B /* EconomyNews.swift */; };
 		4E98C470284E05DB004E690B /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C46F284E05DB004E690B /* News.swift */; };
 		4E98C472284E125C004E690B /* NewsCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C471284E125C004E690B /* NewsCellTableViewCell.swift */; };
-		80178E55284DC9550008B13B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178E54284DC9550008B13B /* CalendarViewController.swift */; };
+		80178E5B284E23490008B13B /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178E5A284E23490008B13B /* CalendarViewController.swift */; };
 		9FA717ED2CEB9ABC93911D2A /* Pods_all_in_one.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3113E7EE47DD18936BD1999C /* Pods_all_in_one.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +70,7 @@
 		4E98C46D284E0549004E690B /* EconomyNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EconomyNews.swift; sourceTree = "<group>"; };
 		4E98C46F284E05DB004E690B /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		4E98C471284E125C004E690B /* NewsCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellTableViewCell.swift; sourceTree = "<group>"; };
-		80178E54284DC9550008B13B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		80178E5A284E23490008B13B /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarViewController.swift; path = "all-in-one/calendar/CalendarViewController.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				4E98C46C284E0532004E690B /* data */,
-				80178E54284DC9550008B13B /* CalendarViewController.swift */,
+				80178E5A284E23490008B13B /* CalendarViewController.swift */,
 				4E98C471284E125C004E690B /* NewsCellTableViewCell.swift */,
 			);
 			path = calendar;
@@ -331,6 +331,7 @@
 				4E8EAE8628487FFD00906A1D /* AllDataController.swift in Sources */,
 				4E98C462284C9379004E690B /* StarredCell.swift in Sources */,
 				4E47CCDC284243E00097AA0B /* YF.swift in Sources */,
+				80178E5B284E23490008B13B /* CalendarViewController.swift in Sources */,
 				4E98C460284C7960004E690B /* ApiClient.swift in Sources */,
 				4E65AD1128213F3E0081482B /* MainViewController.swift in Sources */,
 				4E98C470284E05DB004E690B /* News.swift in Sources */,
@@ -339,7 +340,6 @@
 				4E8EAE882848AF6000906A1D /* Index.swift in Sources */,
 				4E47CCD72841FA340097AA0B /* BTCKRW.swift in Sources */,
 				4E47CCD928422CA30097AA0B /* GOLD.swift in Sources */,
-				80178E55284DC9550008B13B /* CalendarViewController.swift in Sources */,
 				4E98C46B284E041B004E690B /* NewsApi.swift in Sources */,
 				4E65AD0D28213F3E0081482B /* AppDelegate.swift in Sources */,
 				4E47CCD0283F659A0097AA0B /* Network.swift in Sources */,
