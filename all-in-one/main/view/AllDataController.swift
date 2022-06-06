@@ -14,7 +14,6 @@ class AllDataController: UIViewController {
     
     var items: [Summary] = []
     var backups: [Summary] = []
-    var subBackups: [Summary] = []
     
     let defaults = UserDefaults.standard
 
