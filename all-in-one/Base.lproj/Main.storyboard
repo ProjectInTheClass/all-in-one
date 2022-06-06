@@ -425,6 +425,117 @@
             </objects>
             <point key="canvasLocation" x="808" y="1523"/>
         </scene>
+        <!--Alarm Tab View Controller-->
+        <scene sceneID="19G-H5-03O">
+            <objects>
+                <viewController storyboardIdentifier="AlarmTab" id="NWY-fT-okD" customClass="AlarmTabViewController" customModule="all_in_one" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V2A-ag-awc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="H0t-M7-LKD">
+                                <rect key="frame" x="20" y="135" width="374" height="678"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="alarmTableViewCell" id="yrh-C0-Zgg">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="374" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yrh-C0-Zgg" id="9ZZ-eA-cVs">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="alarmTableViewCell">
+                                            <accessibilityTraits key="traits" button="YES" notEnabled="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-NH-re6">
+                                <rect key="frame" x="292" y="96" width="51" height="31"/>
+                                <connections>
+                                    <action selector="alarmButton:" destination="NWY-fT-okD" eventType="touchDown" id="aH8-Re-afm"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알람 설정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjl-F0-fiM">
+                                <rect key="frame" x="34" y="98" width="78" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZoN-ha-qib"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jjl-F0-fiM" firstAttribute="top" secondItem="ZoN-ha-qib" secondAttribute="top" constant="10" id="B3f-3M-TgJ"/>
+                            <constraint firstItem="Jjl-F0-fiM" firstAttribute="leading" secondItem="ZoN-ha-qib" secondAttribute="leading" constant="34" id="qJr-Xt-tds"/>
+                            <constraint firstItem="hdr-NH-re6" firstAttribute="top" secondItem="ZoN-ha-qib" secondAttribute="top" constant="8" id="wEt-Fl-QkV"/>
+                            <constraint firstItem="ZoN-ha-qib" firstAttribute="trailing" secondItem="hdr-NH-re6" secondAttribute="trailing" constant="49" id="zwT-sK-YiH"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="alarmTableView" destination="H0t-M7-LKD" id="NDY-3r-HRo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QTu-jk-eIr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3425" y="1523"/>
+        </scene>
+        <!--Time Picker Controller-->
+        <scene sceneID="oZf-aq-Sta">
+            <objects>
+                <viewController storyboardIdentifier="DatePicker" id="CYY-YQ-V74" customClass="TimePickerController" customModule="all_in_one" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EXp-Ul-b3C">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3wg-sb-pJJ">
+                                <rect key="frame" x="20" y="324" width="350" height="186"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQX-KE-uM1">
+                                <rect key="frame" x="288" y="611" width="68" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="저장">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="alarmSave:" destination="CYY-YQ-V74" eventType="touchUpInside" id="5Pg-yz-POO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6b-cV-YaT">
+                                <rect key="frame" x="74" y="611" width="68" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="취소">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="alarmCancel:" destination="CYY-YQ-V74" eventType="touchUpInside" id="jlY-aq-PhP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ujW-3t-cN9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3wg-sb-pJJ" firstAttribute="leading" secondItem="ujW-3t-cN9" secondAttribute="leading" constant="20" id="Okp-sD-cX7"/>
+                            <constraint firstItem="3wg-sb-pJJ" firstAttribute="top" secondItem="ujW-3t-cN9" secondAttribute="top" constant="280" id="U44-Q6-4Z4"/>
+                            <constraint firstItem="ujW-3t-cN9" firstAttribute="bottom" secondItem="3wg-sb-pJJ" secondAttribute="bottom" constant="300" id="YZt-N9-LGH"/>
+                            <constraint firstItem="ujW-3t-cN9" firstAttribute="trailing" secondItem="3wg-sb-pJJ" secondAttribute="trailing" constant="20" id="iFF-Ly-e4R"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alarmDatePicker" destination="3wg-sb-pJJ" id="NiQ-tj-UpU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Egk-r0-L7V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4166" y="1523"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="dvC-rc-Plu"/>
