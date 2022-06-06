@@ -271,11 +271,12 @@
                     </tabBar>
                     <connections>
                         <segue destination="4d0-VN-XkY" kind="relationship" relationship="viewControllers" id="VpV-nO-h9A"/>
+                        <segue destination="gv9-mV-NRA" kind="relationship" relationship="viewControllers" id="cw8-TV-UAN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGH-xG-dvx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+            <point key="canvasLocation" x="-672" y="1524"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="azR-Uk-m55">
@@ -315,10 +316,45 @@
             </objects>
             <point key="canvasLocation" x="808" y="93"/>
         </scene>
+        <!--Events-->
+        <scene sceneID="gwz-2Z-9Ba">
+            <objects>
+                <viewController id="hFD-UJ-Eha" customClass="CalendarViewController" customModule="all_in_one" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vqe-xg-mpZ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bHh-7G-7xK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Events" id="SuK-8x-Aw3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9F9-bB-kgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1803" y="1523"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="NpQ-JH-hCN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gv9-mV-NRA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="aPs-yy-mDi"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hWZ-Nx-wW0">
+                        <rect key="frame" x="0.0" y="44" width="390" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hFD-UJ-Eha" kind="relationship" relationship="rootViewController" id="MsZ-Uk-JyL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zS5-Ww-eQq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="808" y="1523"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fzc-9A-Ynx"/>
-        <segue reference="aKp-gW-AVN"/>
+        <segue reference="dvC-rc-Plu"/>
+        <segue reference="b7V-TO-aAN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="star" catalog="system" width="128" height="116"/>
