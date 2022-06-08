@@ -8,9 +8,8 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var title: UILabel!
-
     @IBOutlet weak var mainMessage: UILabel!
     
     override func awakeFromNib() {

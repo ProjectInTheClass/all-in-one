@@ -34,8 +34,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="mainMessage" destination="ND6-uM-olA" id="66g-rw-MfL"/>
-                <outlet property="title" destination="SLJ-YR-QFP" id="HPa-DR-yB5"/>
+                <outlet property="mainMessage" destination="ND6-uM-olA" id="Thj-1E-ZU0"/>
+                <outlet property="title" destination="SLJ-YR-QFP" id="jmt-6l-wXB"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="91.741071428571431"/>
         </tableViewCell>

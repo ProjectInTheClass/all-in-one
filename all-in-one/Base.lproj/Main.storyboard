@@ -582,9 +582,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cancelButton" destination="ChA-fE-Id5" id="UVB-8V-cfy"/>
-                        <outlet property="datePicker" destination="I4Z-PV-Sme" id="RJ5-dh-1yU"/>
-                        <outlet property="saveButton" destination="dYP-uX-SfV" id="zSf-eW-arz"/>
+                        <outlet property="cancelButton" destination="ChA-fE-Id5" id="LdP-ZJ-rNP"/>
+                        <outlet property="datePicker" destination="I4Z-PV-Sme" id="Btc-cP-aAv"/>
+                        <outlet property="saveButton" destination="dYP-uX-SfV" id="HZb-a7-XXS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1l-OE-DSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -670,9 +670,9 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="alarmTableView" destination="ueA-Hy-ixS" id="bJd-1R-dmT"/>
-                        <outlet property="allOnOff" destination="7dk-tK-Mqo" id="FVR-By-msL"/>
-                        <outlet property="plusButton" destination="xOy-qb-dAc" id="qYO-Hg-grJ"/>
+                        <outlet property="alarmTableView" destination="ueA-Hy-ixS" id="n3z-Oc-4dj"/>
+                        <outlet property="allOnOff" destination="7dk-tK-Mqo" id="2HI-Tc-w6p"/>
+                        <outlet property="plusButton" destination="xOy-qb-dAc" id="88t-qf-ToW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wi1-16-440" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

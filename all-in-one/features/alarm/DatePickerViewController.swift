@@ -9,11 +9,11 @@ import UIKit
 
 class DatePickerController:UIViewController {
 
+    // selector 생성하기!!
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
-    // selector 생성하기!!
-//    let timeSelector: Selector = #selector(DatePickerController.updateTime)
+    //    let timeSelector: Selector = #selector(DatePickerController.updateTime)
 //    let interval = 1.0
     
     

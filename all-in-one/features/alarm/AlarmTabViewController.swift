@@ -7,11 +7,10 @@
 
 import UIKit
 
-class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var plusButton: UIImageView!
-    @IBOutlet weak var alarmTableView: UITableView! 
+class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {    
     @IBOutlet weak var allOnOff: UISwitch!
-    
+    @IBOutlet weak var alarmTableView: UITableView!
+    @IBOutlet weak var plusButton: UIImageView!
     
     override func viewDidLoad() {
         //sendLocalNotification(seconds: 1.0, data: alarmList[0])
@@ -85,7 +84,7 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @objc func plusButtonAction(tapPlusButton :UITapGestureRecognizer) {
-        
+        requestNotificationAuthorization()
         // 뷰 객체 얻어오기 (storyboard ID로 ViewController구분)
         guard let datePicker = storyboard?.instantiateViewController(identifier: "DatePicker") else {
             return
