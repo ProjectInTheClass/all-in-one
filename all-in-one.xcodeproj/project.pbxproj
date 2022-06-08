@@ -38,6 +38,11 @@
 		4E98C4E82850C1B5004E690B /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C4E72850C1B5004E690B /* EditViewController.swift */; };
 		4E98C4EA2850C2E7004E690B /* ApiClient3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C4E92850C2E7004E690B /* ApiClient3.swift */; };
 		4E98C4EC2850CB50004E690B /* EditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C4EB2850CB50004E690B /* EditCell.swift */; };
+		80178FAC2850E6790008B13B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80178FA72850E6790008B13B /* CustomTableViewCell.xib */; };
+		80178FAD2850E6790008B13B /* AlarmTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178FA82850E6790008B13B /* AlarmTabViewController.swift */; };
+		80178FAE2850E6790008B13B /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178FA92850E6790008B13B /* DatePickerViewController.swift */; };
+		80178FAF2850E6790008B13B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178FAA2850E6790008B13B /* CustomTableViewCell.swift */; };
+		80178FB02850E6790008B13B /* alarmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178FAB2850E6790008B13B /* alarmAPI.swift */; };
 		9FA717ED2CEB9ABC93911D2A /* Pods_all_in_one.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3113E7EE47DD18936BD1999C /* Pods_all_in_one.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +86,11 @@
 		4E98C4E72850C1B5004E690B /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		4E98C4E92850C2E7004E690B /* ApiClient3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient3.swift; sourceTree = "<group>"; };
 		4E98C4EB2850CB50004E690B /* EditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCell.swift; sourceTree = "<group>"; };
+		80178FA72850E6790008B13B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		80178FA82850E6790008B13B /* AlarmTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTabViewController.swift; sourceTree = "<group>"; };
+		80178FA92850E6790008B13B /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		80178FAA2850E6790008B13B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		80178FAB2850E6790008B13B /* alarmAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = alarmAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +166,7 @@
 		4E98C4BC284E3A26004E690B /* features */ = {
 			isa = PBXGroup;
 			children = (
+				80178FA62850E6790008B13B /* alarm */,
 				4E98C4BD284E3A26004E690B /* calendar */,
 				4E98C4C3284E3A26004E690B /* main */,
 			);
@@ -223,6 +234,18 @@
 				4E98C4E92850C2E7004E690B /* ApiClient3.swift */,
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		80178FA62850E6790008B13B /* alarm */ = {
+			isa = PBXGroup;
+			children = (
+				80178FA72850E6790008B13B /* CustomTableViewCell.xib */,
+				80178FA82850E6790008B13B /* AlarmTabViewController.swift */,
+				80178FA92850E6790008B13B /* DatePickerViewController.swift */,
+				80178FAA2850E6790008B13B /* CustomTableViewCell.swift */,
+				80178FAB2850E6790008B13B /* alarmAPI.swift */,
+			);
+			path = alarm;
 			sourceTree = "<group>";
 		};
 		A9449FFF71A50D9D74098AA4 /* Pods */ = {
@@ -297,6 +320,7 @@
 			files = (
 				4E65AD1928213F3F0081482B /* LaunchScreen.storyboard in Resources */,
 				4E65AD1628213F3F0081482B /* Assets.xcassets in Resources */,
+				80178FAC2850E6790008B13B /* CustomTableViewCell.xib in Resources */,
 				4E65AD1428213F3E0081482B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,9 +390,11 @@
 				4E47CCD72841FA340097AA0B /* Coin.swift in Sources */,
 				4E98C4DB284E3A31004E690B /* ApiClient.swift in Sources */,
 				4E47CCD928422CA30097AA0B /* GOLD.swift in Sources */,
+				80178FB02850E6790008B13B /* alarmAPI.swift in Sources */,
 				4E98C4D1284E3A26004E690B /* AllDataController.swift in Sources */,
 				4E98C4D4284E3A26004E690B /* Summary.swift in Sources */,
 				4E65AD0D28213F3E0081482B /* AppDelegate.swift in Sources */,
+				80178FAF2850E6790008B13B /* CustomTableViewCell.swift in Sources */,
 				4E47CCD5283F6FC40097AA0B /* BTCUSD.swift in Sources */,
 				4E98C4CF284E3A26004E690B /* News.swift in Sources */,
 				4E98C45C284B7743004E690B /* KStock.swift in Sources */,
@@ -376,7 +402,9 @@
 				4E98C4DD284E3A31004E690B /* NewsApi.swift in Sources */,
 				4E98C4CE284E3A26004E690B /* EconomyNews.swift in Sources */,
 				4E98C4EA2850C2E7004E690B /* ApiClient3.swift in Sources */,
+				80178FAE2850E6790008B13B /* DatePickerViewController.swift in Sources */,
 				4E98C4E62850C04A004E690B /* ApiClient2.swift in Sources */,
+				80178FAD2850E6790008B13B /* AlarmTabViewController.swift in Sources */,
 				4E98C4D2284E3A26004E690B /* ChartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
