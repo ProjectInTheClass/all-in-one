@@ -136,13 +136,33 @@ class ApiClient {
                         summary.unit = "$"
                         self.controller.items.append(summary)
                     }
-                    
                     self.controller.tableView.reloadData()
                 }catch {
                     print(error)
                 }
             })
         }
+    }
+    
+    func getKstock(tickers: String) {
+        let params = [
+            "apikey" : "3c3226f489553d666ffcc4f26938fcdb"
+        ]
+            
+        Network.shared.getAPIData(url: "https://financialmodelingprep.com/api/v3/quote/\(tickers)", parameters: params, completion: { (data) -> (Void) in
+            do {
+                let res = try JSONDecoder().decode(KStock.self, from : data)
+                
+                for i in res {
+                    let summary = Summary(i.name, String(i.price), i.symbol)
+                    summary.unit = "₩"
+                    self.controller.items.append(summary)
+                }
+                self.controller.tableView.reloadData()
+            }catch {
+                print(error)
+            }
+        })
     }
 
     func getKorPremium(name: String, kimp: [String:Double]){

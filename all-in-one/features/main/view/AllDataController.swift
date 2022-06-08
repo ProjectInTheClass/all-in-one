@@ -73,14 +73,11 @@ class AllDataController: UIViewController {
         client.getDataFromFinancialModeling(tickers:"index")
         
         //Stocks
-        client.getDataFromFinancialModeling(tickers:"AAPL,MSFT,GOOG,AMZN,FB,TSLA,NVDA,PYPL,ASML")
+        client.getDataFromFinancialModeling(tickers:"AAPL,MSFT,GOOG,AMZN,FB,TSLA,NVDA,PYPL")
         
         //Korean Stocks
-        let param_korea: Parameters = [
-            "symbols": "005930.KS,373220.KS,000660.KS,051915.KS,035420.KS,005380.KS,035720.KS,000270.KS,068270.KS,005490.KS"
-        ]
-        client.getDataFromYahooFinance(parameters: param_korea)
-
+        client.getKstock(tickers: "005930.KS,000660.KS,051915.KS,035420.KS,005380.KS,035720.KS,000270.KS,068270.KS,005490.KS,259960.KS,112040.KS")
+        
         
         // BTC Korean Premium
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){

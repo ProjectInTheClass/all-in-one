@@ -18,7 +18,8 @@ class NewsApi {
     func getDataFromNewsApi() {
         let params = [
             "country" : "kr",
-            "category" : "business"
+            "category" : "business",
+            "apiKey" : "ef3b6e61475f4013ad1207771178e4fe"
         ]
         Network.shared.getAPIData(url: "https://newsapi.org/v2/top-headlines", parameters: params, completion: { (data) -> (Void) in
             do {

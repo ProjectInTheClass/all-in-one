@@ -102,20 +102,13 @@ class ApiClient2 {
             "apikey" : "3c3226f489553d666ffcc4f26938fcdb"
         ]
                 
-        if tickers == "index" {
-            let major = [
-                "^HSI",
-                "^DJT",
-                "^IXIC",
-                "^KS11"
-            ]
-            
+        if "^HSI^DJT^IXIC^KS11".contains(tickers) {
             Network.shared.getAPIData(url: "https://financialmodelingprep.com/api/v3/quotes/index", parameters: params, completion: { (data) -> (Void) in
                 do {
                     let res = try JSONDecoder().decode(Index.self, from : data)
                     
                     for i in res {
-                        if(major.contains(i.symbol)){
+                        if(tickers.contains(i.symbol)){
                             let summary = Summary(i.name, String(format: "%.2f", i.price), i.symbol)
                             summary.unit = "point"
                             self.controller.items.append(summary)
@@ -135,8 +128,9 @@ class ApiClient2 {
                     
                     for i in res {
                         let summary = Summary(i.name, String(format: "%.2f", i.price), i.symbol)
-                        summary.unit = "$"
+                        summary.unit = "point"
                         self.controller.items.append(summary)
+                        break
                     }
                     
                     self.controller.tableView.reloadData()

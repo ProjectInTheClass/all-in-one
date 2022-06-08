@@ -4,16 +4,6 @@
 //
 //  Created by 박현준 on 2022/06/06.
 //
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let economyNews = try? newJSONDecoder().decode(EconomyNews.self, from: jsonData)
-
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let economyNews = try? newJSONDecoder().decode(EconomyNews.self, from: jsonData)
-
 import Foundation
 
 // MARK: - EconomyNews
@@ -42,20 +32,20 @@ struct Article: Codable {
 
 // MARK: - Source
 struct Source: Codable {
-    let id: JSONNull?
+    let id: JSONNullNews?
     let name: String
 }
 
 // MARK: - Encode/decode helpers
 
-class JSONNull: Codable, Hashable {
+class JSONNullNews: Codable, Hashable {
 
-    public static func == (lhs: JSONNull, rhs: JSONNull) -> Bool {
+    public static func == (lhs: JSONNullNews, rhs: JSONNullNews) -> Bool {
         return true
     }
-
-    public var hashValue: Int {
-        return 0
+    
+    func hash(into hasher: inout Hasher) {
+        return
     }
 
     public init() {}
@@ -63,7 +53,7 @@ class JSONNull: Codable, Hashable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if !container.decodeNil() {
-            throw DecodingError.typeMismatch(JSONNull.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
+            throw DecodingError.typeMismatch(JSONNullNews.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for JSONNull"))
         }
     }
 
@@ -72,4 +62,3 @@ class JSONNull: Codable, Hashable {
         try container.encodeNil()
     }
 }
-
