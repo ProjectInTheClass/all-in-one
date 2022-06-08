@@ -77,7 +77,7 @@ class AllDataController: UIViewController {
         
         //Korean Stocks
         client.getKstock(tickers: "005930.KS,000660.KS,051915.KS,035420.KS,005380.KS,035720.KS,000270.KS,068270.KS,005490.KS,259960.KS,112040.KS")
-        client.getKstock(tickers: "017040.KS,047810.KS,068400.KS,015760.KS,000990.KS,032830.KS,     006400.KS,003490.KS,009830.KS,019170.KS")
+        client.getKstock(tickers: "068400.KS,015760.KS,000990.KS,032830.KS")
         
         
         // BTC Korean Premium
@@ -138,13 +138,17 @@ extension AllDataController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SummaryCell", for: indexPath) as! SummaryTableViewCell
         
         
-        cell.cellTitle.text = items[indexPath.row].title
-        cell.cellUnit.text = items[indexPath.row].unit
-        cell.cellValue.text = items[indexPath.row].value
+        let title = items[indexPath.row].title
+        cell.cellTitle.text = title.count < 20 ? title : shortify(title)
         cell.cellTicker = items[indexPath.row].ticker
         cell.cellStar.isSelected = defaults.bool(forKey: cell.cellTicker)
         
         return cell
+    }
+    
+    func shortify(_ str: String) -> String{
+        let endIdx: String.Index = str.index(str.startIndex, offsetBy: 19)
+        return String(str[...endIdx]) + ".."
     }
 }
 
