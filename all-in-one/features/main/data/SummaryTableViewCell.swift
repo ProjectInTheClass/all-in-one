@@ -11,8 +11,6 @@ class SummaryTableViewCell: UITableViewCell {
 
     @IBOutlet var cellStar: UIButton!
     @IBOutlet var cellTitle: UILabel!
-    @IBOutlet var cellValue: UILabel!
-    @IBOutlet var cellUnit: UILabel!
     var cellTicker: String!
     
     override func awakeFromNib() {

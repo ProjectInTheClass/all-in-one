@@ -1,16 +1,15 @@
 //
-//  ApiClient.swift
+//  ApiClient3.swift
 //  all-in-one
 //
-//  Created by 박현준 on 2022/06/05.
+//  Created by 박현준 on 2022/06/08.
 //
-
 import Foundation
 import Alamofire
 import UIKit
 
-class ApiClient2 {
-    let controller: MainViewController
+class ApiClient3 {
+    let controller: EditViewController
     
     var kimp = [
         "btcusd": 0.0,
@@ -18,7 +17,7 @@ class ApiClient2 {
         "rate": 0.0
     ]
     
-    init(controller: MainViewController){
+    init(controller: EditViewController){
         self.controller = controller
     }
     

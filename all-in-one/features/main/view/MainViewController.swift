@@ -38,7 +38,6 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         let starred = defaults.array(forKey: "star-index")
         for ticker in starred! {
-            print(ticker)
             getData(ticker: ticker as! String)
         }
     }
@@ -110,11 +109,11 @@ class MainViewController: UIViewController {
             client.getDataFromBitfinex(name: ticker)
         }
         
-        else if(ticker == "BTCKRW"){
+        else if(ticker.prefix(3) == "KRW"){
             let param_upbit: Parameters = [
-                "markets": "KRW-BTC"
+                "markets": ticker
             ]
-            client.getDataFromUpbit(name: "BTCKRW", parameters: param_upbit)
+            client.getDataFromUpbit(parameters: param_upbit)
         }
         
         else if(ticker == "금(GOLD)" || ticker == "은(SILVER)") {
