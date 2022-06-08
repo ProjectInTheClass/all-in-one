@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4E47CCD3283F6E830097AA0B /* Manana.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCD2283F6E830097AA0B /* Manana.swift */; };
 		4E47CCD5283F6FC40097AA0B /* BTCUSD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCD4283F6FC40097AA0B /* BTCUSD.swift */; };
-		4E47CCD72841FA340097AA0B /* BTCKRW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCD62841FA340097AA0B /* BTCKRW.swift */; };
+		4E47CCD72841FA340097AA0B /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCD62841FA340097AA0B /* Coin.swift */; };
 		4E47CCD928422CA30097AA0B /* GOLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCD828422CA30097AA0B /* GOLD.swift */; };
 		4E47CCDC284243E00097AA0B /* YF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E47CCDB284243E00097AA0B /* YF.swift */; };
 		4E65AD0D28213F3E0081482B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E65AD0C28213F3E0081482B /* AppDelegate.swift */; };
@@ -44,7 +44,7 @@
 		3282F7804BCE0809D3EEF749 /* Pods-all-in-one.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-all-in-one.release.xcconfig"; path = "Target Support Files/Pods-all-in-one/Pods-all-in-one.release.xcconfig"; sourceTree = "<group>"; };
 		4E47CCD2283F6E830097AA0B /* Manana.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manana.swift; sourceTree = "<group>"; };
 		4E47CCD4283F6FC40097AA0B /* BTCUSD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCUSD.swift; sourceTree = "<group>"; };
-		4E47CCD62841FA340097AA0B /* BTCKRW.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTCKRW.swift; sourceTree = "<group>"; };
+		4E47CCD62841FA340097AA0B /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
 		4E47CCD828422CA30097AA0B /* GOLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GOLD.swift; sourceTree = "<group>"; };
 		4E47CCDA28423A750097AA0B /* .gitignore.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = .gitignore.md; sourceTree = "<group>"; };
 		4E47CCDB284243E00097AA0B /* YF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YF.swift; sourceTree = "<group>"; };
@@ -102,7 +102,7 @@
 			children = (
 				4E47CCD2283F6E830097AA0B /* Manana.swift */,
 				4E47CCD4283F6FC40097AA0B /* BTCUSD.swift */,
-				4E47CCD62841FA340097AA0B /* BTCKRW.swift */,
+				4E47CCD62841FA340097AA0B /* Coin.swift */,
 				4E47CCD828422CA30097AA0B /* GOLD.swift */,
 				4E47CCDB284243E00097AA0B /* YF.swift */,
 				4E8EAE872848AF6000906A1D /* Index.swift */,
@@ -352,7 +352,7 @@
 				4E8EAE882848AF6000906A1D /* Index.swift in Sources */,
 				4E98C4CD284E3A26004E690B /* NewsCellTableViewCell.swift in Sources */,
 				4E98C4DC284E3A31004E690B /* Network.swift in Sources */,
-				4E47CCD72841FA340097AA0B /* BTCKRW.swift in Sources */,
+				4E47CCD72841FA340097AA0B /* Coin.swift in Sources */,
 				4E98C4DB284E3A31004E690B /* ApiClient.swift in Sources */,
 				4E47CCD928422CA30097AA0B /* GOLD.swift in Sources */,
 				4E98C4D1284E3A26004E690B /* AllDataController.swift in Sources */,

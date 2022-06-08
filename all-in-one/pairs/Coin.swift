@@ -3,19 +3,10 @@
 //  all-in-one
 //
 //  Created by 박현준 on 2022/05/28.
-//
-
 import Foundation
 
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let btckrw = try? newJSONDecoder().decode(Btckrw.self, from: jsonData)
-
-import Foundation
-
-// MARK: - BTCKRWElement
-struct BTCKRWElement: Codable {
+// MARK: - CoinElement
+struct CoinElement: Codable {
     let market, tradeDate, tradeTime, tradeDateKst: String
     let tradeTimeKst: String
     let tradeTimestamp, openingPrice, highPrice, lowPrice: Int
@@ -26,10 +17,6 @@ struct BTCKRWElement: Codable {
     let signedChangePrice: Int
     let signedChangeRate, tradeVolume, accTradePrice, accTradePrice24H: Double
     let accTradeVolume, accTradeVolume24H: Double
-    let highest52_WeekPrice: Int
-    let highest52_WeekDate: String
-    let lowest52_WeekPrice: Int
-    let lowest52_WeekDate: String
     let timestamp: Int
 
     enum CodingKeys: String, CodingKey {
@@ -54,12 +41,8 @@ struct BTCKRWElement: Codable {
         case accTradePrice24H = "acc_trade_price_24h"
         case accTradeVolume = "acc_trade_volume"
         case accTradeVolume24H = "acc_trade_volume_24h"
-        case highest52_WeekPrice = "highest_52_week_price"
-        case highest52_WeekDate = "highest_52_week_date"
-        case lowest52_WeekPrice = "lowest_52_week_price"
-        case lowest52_WeekDate = "lowest_52_week_date"
         case timestamp
     }
 }
 
-typealias BTCKRW = [BTCKRWElement]
+typealias Coin = [CoinElement]

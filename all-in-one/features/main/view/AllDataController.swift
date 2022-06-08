@@ -59,11 +59,11 @@ class AllDataController: UIViewController {
         //BTCUSD
         client.getDataFromBitfinex(name: "BTCUSD")
         
-        //BTCKRW
+        //Coins
         let param_upbit: Parameters = [
-            "markets": "KRW-BTC"
+            "markets": "KRW-BTC,KRW-ETH,KRW-XRP,KRW-SOL,KRW-ADA,KRW-WEMIX,KRW-SAND,KRW-AXS,KRW-EOS,KRW-FLOW,KRW-MTL,KRW-ETC,KRW-NEO,KRW-WAVES,KRW-GAS,KRW-REP,KRW-STEEM,KRW-BTG"
         ]
-        client.getDataFromUpbit(name: "BTCKRW", parameters: param_upbit)
+        client.getDataFromUpbit(parameters: param_upbit)
         
         //Gold & Silver
         client.getDataFromGoldAPI(name: "금(GOLD)")
@@ -77,6 +77,7 @@ class AllDataController: UIViewController {
         
         //Korean Stocks
         client.getKstock(tickers: "005930.KS,000660.KS,051915.KS,035420.KS,005380.KS,035720.KS,000270.KS,068270.KS,005490.KS,259960.KS,112040.KS")
+        client.getKstock(tickers: "017040.KS,047810.KS,068400.KS,015760.KS,000990.KS,032830.KS,     006400.KS,003490.KS,009830.KS,019170.KS")
         
         
         // BTC Korean Premium

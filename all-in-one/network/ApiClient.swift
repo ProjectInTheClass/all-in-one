@@ -51,12 +51,18 @@ class ApiClient {
         })
     }
 
-    func getDataFromUpbit(name: String, parameters: Parameters = [:]){
+    func getDataFromUpbit(parameters: Parameters){
         Network.shared.getAPIData(url: "https://api.upbit.com/v1/ticker", parameters: parameters, completion: { (data) -> (Void) in
             do {
-                let res = try JSONDecoder().decode(BTCKRW.self, from : data)
-                self.kimp["btckrw"] = Double(res[0].tradePrice)
-                self.controller.items.append(Summary(name, String(res[0].tradePrice)))
+                let res = try JSONDecoder().decode(Coin.self, from : data)
+                for i in res{
+                    if i.market == "KRW-BTC"{
+                        self.kimp["btckrw"] = Double(i.tradePrice)
+                    }
+                    var summary = Summary(i.market, String(i.tradePrice))
+                    summary.unit = "₩"
+                    self.controller.items.append(summary)
+                }
                 self.controller.tableView.reloadData()
             }catch {
                 print(error)
