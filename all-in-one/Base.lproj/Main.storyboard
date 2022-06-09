@@ -192,6 +192,20 @@
                                 <rect key="frame" x="40" y="148" width="310" height="513"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" red="0.66564470529999997" green="0.77612155679999995" blue="0.96865195039999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Let-qa-wVR">
+                                    <rect key="frame" x="0.0" y="152.33333206176761" width="310" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                    <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="모든 데이터 보기">
+                                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        <color key="baseBackgroundColor" systemColor="systemGray5Color"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <segue destination="qFx-L4-UCi" kind="show" id="t7h-h8-5vI"/>
+                                    </connections>
+                                </button>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StarredCell" rowHeight="85" id="gAc-NQ-viF" customClass="StarredCell" customModule="all_in_one" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="310" height="85"/>
@@ -201,16 +215,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="4ut-08-GLA">
-                                                    <rect key="frame" x="16" y="11" width="104" height="74"/>
+                                                    <rect key="frame" x="16" y="13" width="104" height="69"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="코스피" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNA-ue-x3V">
-                                                            <rect key="frame" x="0.0" y="0.0" width="47" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="47" height="45"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="QYh-qe-LZw">
-                                                            <rect key="frame" x="0.0" y="51" width="104" height="23"/>
+                                                            <rect key="frame" x="0.0" y="46" width="104" height="23"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2730" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzA-d8-vpe">
                                                                     <rect key="frame" x="0.0" y="0.0" width="47.333333333333336" height="23"/>
@@ -230,9 +244,9 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="4ut-08-GLA" secondAttribute="bottom" id="btJ-Fo-UnI"/>
+                                                <constraint firstAttribute="bottom" secondItem="4ut-08-GLA" secondAttribute="bottom" constant="3" id="btJ-Fo-UnI"/>
                                                 <constraint firstItem="4ut-08-GLA" firstAttribute="leading" secondItem="mff-V1-QQA" secondAttribute="leadingMargin" id="lX4-D4-777"/>
-                                                <constraint firstItem="4ut-08-GLA" firstAttribute="top" secondItem="mff-V1-QQA" secondAttribute="topMargin" id="pGi-RQ-sh4"/>
+                                                <constraint firstItem="4ut-08-GLA" firstAttribute="top" secondItem="mff-V1-QQA" secondAttribute="topMargin" constant="2" id="pGi-RQ-sh4"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -275,12 +289,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="yEV-f4-en9"/>
                     <connections>
+                        <outlet property="Btn_All" destination="Let-qa-wVR" id="2Ft-CL-O69"/>
                         <outlet property="tableView" destination="vxU-wg-CXs" id="ycT-2Q-YzY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1768" y="-117"/>
+            <point key="canvasLocation" x="1898" y="-154"/>
         </scene>
         <!--Chart View Controller-->
         <scene sceneID="2AR-8k-Yy2">
@@ -339,7 +354,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="4d0-VN-XkY" kind="relationship" relationship="viewControllers" id="VpV-nO-h9A"/>
-                        <segue destination="PYC-m8-lzj" kind="relationship" relationship="viewControllers" id="YPs-nE-1Q5"/>
                         <segue destination="gv9-mV-NRA" kind="relationship" relationship="viewControllers" id="cw8-TV-UAN"/>
                         <segue destination="5Rk-ET-XXW" kind="relationship" relationship="viewControllers" id="7dw-cS-lnA"/>
                     </connections>
@@ -653,52 +667,15 @@
             </objects>
             <point key="canvasLocation" x="849" y="3122"/>
         </scene>
-        <!--모든 데이터-->
-        <scene sceneID="9xO-3v-Sx6">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PYC-m8-lzj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="모든 데이터" landscapeImage="star.fill" catalog="system" id="JVg-ie-QDA">
-                        <imageReference key="image" image="list.bullet.rectangle.fill" catalog="system" symbolScale="default" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color systemColor="systemBlueColor"/>
-                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                        <color key="badgeColor" systemColor="systemBlueColor"/>
-                        <imageReference key="selectedImage" image="list.bullet.rectangle.fill" catalog="system" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color systemColor="labelColor"/>
-                                <color systemColor="systemBlueColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
-                    </tabBarItem>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="juj-IV-3Io"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dhr-zC-JxI">
-                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="qFx-L4-UCi" kind="relationship" relationship="rootViewController" id="gKP-Lx-yMZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oVz-T8-o5j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="773.84615384615381" y="1331.5165876777251"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dvC-rc-Plu"/>
+        <segue reference="IQr-cr-T1d"/>
         <segue reference="tmS-tm-Cpf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar.badge.plus" catalog="system" width="128" height="108"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="clock.badge.checkmark" catalog="system" width="128" height="113"/>
-        <image name="list.bullet.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="plus.square" catalog="system" width="128" height="114"/>
         <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
@@ -706,11 +683,14 @@
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
