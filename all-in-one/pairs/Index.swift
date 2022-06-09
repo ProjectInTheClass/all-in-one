@@ -14,20 +14,14 @@ struct IndexElement: Codable {
     let marketCap: JSONNull?
     let priceAvg50, priceAvg200: Double
     let volume, avgVolume: Int
-    let exchange: Exchange1
     let indexOpen, previousClose: Double
     let eps, pe, earningsAnnouncement, sharesOutstanding: JSONNull?
-    let timestamp: Int
 
     enum CodingKeys: String, CodingKey {
-        case symbol, name, price, changesPercentage, change, dayLow, dayHigh, yearHigh, yearLow, marketCap, priceAvg50, priceAvg200, volume, avgVolume, exchange
+        case symbol, name, price, changesPercentage, change, dayLow, dayHigh, yearHigh, yearLow, marketCap, priceAvg50, priceAvg200, volume, avgVolume
         case indexOpen = "open"
-        case previousClose, eps, pe, earningsAnnouncement, sharesOutstanding, timestamp
+        case previousClose, eps, pe, earningsAnnouncement, sharesOutstanding
     }
-}
-
-enum Exchange1: String, Codable {
-    case index = "INDEX"
 }
 
 typealias Index = [IndexElement]
