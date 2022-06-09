@@ -7,6 +7,8 @@
 import UserNotifications
 import UIKit
 
+var dataNum :Int = -1
+
 let notificationCenter = UNUserNotificationCenter.current()
 
 func requestNotificationAuthorization() {
@@ -26,13 +28,12 @@ func sendLocalNotification(data :alarmData) {
     notificationCenter.getNotificationSettings() {setting in
         if setting.authorizationStatus == UNAuthorizationStatus.authorized {
             let content = UNMutableNotificationContent()
-            content.title = data.name
-            content.subtitle = "지금 정보를 확인해보세요"
+          
+            content.title = data.time + "알림입니다."
             
-            content.body = data.time + "알림입니다."
+            content.body = "지금 정보를 확인해보세요" + data.name
             //content.userInfo
             //title, subtitle, body, badge, sound
-            
             
             let timeDate = DateFormatter()
             timeDate.dateFormat = "HH-mm"
@@ -43,11 +44,11 @@ func sendLocalNotification(data :alarmData) {
             date.hour = Int(convertDate.prefix(2))
             date.minute = Int(convertDate.suffix(2))
             //let date = Calendar.current.dateComponents([.hour, .minute], from: convertDate ?? <#default value#>!)
-
+            let dataKey = String(dataNum+100)
             //date = convertDate
             let trigger = UNCalendarNotificationTrigger(dateMatching: date, repeats: true)
 
-            let request = UNNotificationRequest(identifier: data.name, content: content, trigger: trigger)
+            let request = UNNotificationRequest(identifier: dataKey, content: content, trigger: trigger)
 
 //            if UserDefaults.standard.bool(forKey: "wantAlarm") {
 //                notificationCenter.add(request) { (error) in
@@ -72,7 +73,7 @@ var isNew :Int = -1
 var allAlarmOn :Bool = true
 let userdefault = UserDefaults.standard
 
-var alarmDataList :[alarmData] = []//default = 0
+var alarmDataList :[alarmData] = []
 
 func initData() {
     userdefault.set([], forKey: "alarmIsOn")
@@ -146,6 +147,7 @@ func removeAlarmData(num: Int) {
 //        i+=1
 //    }
     alarmDataList.remove(at: num)
+
     //removePendingNotificationRequests(tempAlarm.name)
 }
 
@@ -165,4 +167,9 @@ func allAlarmOnFunc() {
 
 func allAlarmOff() {
     //cancelAllLocalNotifications()
+}
+
+func alarmOffFucn(num :Int) {
+    alarmDataList[num].isOn = false
+    //removePendingNotificationRequests(tempAlarm.name)
 }

@@ -15,15 +15,24 @@ class DatePickerController:UIViewController {
     // selector 생성하기!!
 //    let timeSelector: Selector = #selector(DatePickerController.updateTime)
 //    let interval = 1.0
-
-
-    var name = "kospi"
+    
+    func namedata() -> String {
+        var name :String = ""
+       
+        let stroyBoard = MainViewController()
+        let starArray = stroyBoard.items
+        for starName in starArray {
+            name += ("\n- " + starName.searchCase)
+        }
+        return name
+    }
+    
     var dateTime :String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+    
+        
 //        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: timeSelector, userInfo: nil, repeats: true)
     }
 
@@ -41,7 +50,7 @@ class DatePickerController:UIViewController {
     }
 
     @IBAction func saveButton(_ sender: UIButton) {
-        newAlarmData(isOn: true, name: name, time: dateTime)
+        newAlarmData(isOn: true, name: namedata(), time: dateTime)
         reloadPageSignal()
         dismiss(animated: true)
     }

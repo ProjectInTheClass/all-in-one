@@ -11,6 +11,7 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var plusButton: UIImageView!
     @IBOutlet weak var alarmTableView: UITableView!
     @IBOutlet weak var allOnOff: UISwitch!
+
     
     override func viewDidLoad() {
         //sendLocalNotification(seconds: 1.0, data: alarmList[0])
@@ -18,13 +19,13 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
         //sendLocalNotification(seconds: 1.0, data: alarmList[0])
         // Do any additional setup after loading the view.
         let tapPlusButton = UITapGestureRecognizer(target: self, action: #selector(plusButtonAction(tapPlusButton:)))
-       
+        
         plusButton.isUserInteractionEnabled = true
         plusButton.addGestureRecognizer(tapPlusButton)
         alarmTableView.delegate = self
         alarmTableView.dataSource = self
         NotificationCenter.default.addObserver(self, selector: #selector(didRecieveNotification(_:)), name: NSNotification.Name("ReloadPage"), object: nil)
-        //getData()
+        getData()
         self.registerTableViewCells()
     }
     
@@ -40,7 +41,7 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as? CustomTableViewCell {
-            cell.title.text = alarmDataList[indexPath.row].name
+            //cell.title.text = alarmDataList[indexPath.row].name
             cell.mainMessage.text = alarmDataList[indexPath.row].time
             cell.thisIndexPathRow = indexPath.row
             return cell
@@ -73,23 +74,23 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-       let action = UIContextualAction(style: .normal, title: "삭제") { (action, view, completion) in
-           tableView.deleteRows(at: [indexPath], with: .automatic)
-           completion(true)
-        }
-        
-        action.backgroundColor = .red
-        //action.image = #imageLiteral(resourceName: "DeleteIcon")
-        
-        //delete data
-        
-        removeAlarmData(num: indexPath.row)
-        let configuration = UISwipeActionsConfiguration(actions: [action])
-        configuration.performsFirstActionWithFullSwipe = false
-        return configuration
-    }
-    
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//       let action = UIContextualAction(style: .normal, title: "삭제") { (action, view, completion) in
+//           tableView.deleteRows(at: [indexPath], with: .automatic)
+//           completion(true)
+//        }
+//
+//        action.backgroundColor = .red
+//        //action.image = #imageLiteral(resourceName: "DeleteIcon")
+//
+//        //delete data
+//
+//        removeAlarmData(num: indexPath.row)
+//        let configuration = UISwipeActionsConfiguration(actions: [action])
+//        configuration.performsFirstActionWithFullSwipe = false
+//        return configuration
+//    }
+//
     @objc func plusButtonAction(tapPlusButton :UITapGestureRecognizer) {
         notificationCenter.getNotificationSettings() {setting in
             if setting.authorizationStatus == UNAuthorizationStatus.authorized {
