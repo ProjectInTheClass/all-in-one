@@ -140,11 +140,12 @@ func removeAlarmData(num: Int) {
     //alarmDataList[num] delete
     
     //let tempAlarm = alarmDataList[num]
-    var i = num
-    while i<alarmDataList.count-2 {
-        alarmDataList[i] = alarmDataList[i+1]
-        i+=1
-    }
+//    var i = num
+//    while i<alarmDataList.count-2 {
+//        alarmDataList[i] = alarmDataList[i+1]
+//        i+=1
+//    }
+    alarmDataList.remove(at: num)
     //removePendingNotificationRequests(tempAlarm.name)
 }
 

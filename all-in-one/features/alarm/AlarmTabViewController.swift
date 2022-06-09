@@ -7,10 +7,10 @@
 
 import UIKit
 
-class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {    
-    @IBOutlet weak var allOnOff: UISwitch!
-    @IBOutlet weak var alarmTableView: UITableView!
+class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var plusButton: UIImageView!
+    @IBOutlet weak var alarmTableView: UITableView!
+    @IBOutlet weak var allOnOff: UISwitch!
     
     override func viewDidLoad() {
         //sendLocalNotification(seconds: 1.0, data: alarmList[0])
@@ -18,15 +18,22 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
         //sendLocalNotification(seconds: 1.0, data: alarmList[0])
         // Do any additional setup after loading the view.
         let tapPlusButton = UITapGestureRecognizer(target: self, action: #selector(plusButtonAction(tapPlusButton:)))
+       
         plusButton.isUserInteractionEnabled = true
         plusButton.addGestureRecognizer(tapPlusButton)
         alarmTableView.delegate = self
         alarmTableView.dataSource = self
+        NotificationCenter.default.addObserver(self, selector: #selector(didRecieveNotification(_:)), name: NSNotification.Name("ReloadPage"), object: nil)
         //getData()
         self.registerTableViewCells()
     }
     
+    @objc func didRecieveNotification(_ notification: Notification) {
+        alarmTableView.reloadData()
+     }
+    
     override func viewWillAppear(_ animated: Bool) {
+        
         alarmTableView.reloadData()
     }
     
@@ -35,7 +42,7 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell") as? CustomTableViewCell {
             cell.title.text = alarmDataList[indexPath.row].name
             cell.mainMessage.text = alarmDataList[indexPath.row].time
-            
+            cell.thisIndexPathRow = indexPath.row
             return cell
         }
         return UITableViewCell()
@@ -84,7 +91,13 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @objc func plusButtonAction(tapPlusButton :UITapGestureRecognizer) {
-        requestNotificationAuthorization()
+        notificationCenter.getNotificationSettings() {setting in
+            if setting.authorizationStatus == UNAuthorizationStatus.authorized {
+                
+            } else {
+                requestNotificationAuthorization()
+            }
+        }
         // 뷰 객체 얻어오기 (storyboard ID로 ViewController구분)
         guard let datePicker = storyboard?.instantiateViewController(identifier: "DatePicker") else {
             return
@@ -92,14 +105,14 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
         
         isNew = -1
         self.present(datePicker, animated: true)
-        alarmTableView.reloadData()
+        
     }
 
-    
     private func registerTableViewCells() {
         let textFieldCell = UINib(nibName: "CustomTableViewCell", bundle: nil)
         self.alarmTableView.register(textFieldCell, forCellReuseIdentifier: "CustomTableViewCell")
     }
+    
     @IBAction func allOnOff(_ sender: UISwitch){
         if allOnOff.isOn{
             allAlarmOnFunc()
@@ -111,3 +124,6 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
    
 }
 
+func reloadPageSignal() {
+    NotificationCenter.default.post(name: NSNotification.Name("ReloadPage"), object: nil, userInfo: nil)
+}
