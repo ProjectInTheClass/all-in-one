@@ -67,6 +67,11 @@ class MainViewController: UIViewController {
             default:
             chartViewController.ticker = sender.cellTicker
         }
+        
+        if sender.cellTicker.prefix(4) == "KRW-" {
+            let arr = sender.cellTicker.components(separatedBy: "-")
+            chartViewController.ticker = arr[1] + "KRW"
+        }
     }
     
     func isFirstTime() -> Bool {
