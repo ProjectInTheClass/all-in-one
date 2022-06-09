@@ -11,7 +11,6 @@ import Toast_Swift
 
 class MainViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var Btn_All: UIButton!
     
     var items: [Summary] = []
     let defaults = UserDefaults.standard
@@ -30,9 +29,6 @@ class MainViewController: UIViewController {
             self.view.makeToast("즐겨찾기 종목을 등록하면 바로 확인할 수 있어요!", duration: 1.0, position: .center)
         }
         
-        Btn_All.layer.cornerRadius = 10
-        Btn_All.layer.borderWidth = 1.5
-        Btn_All.layer.borderColor = UIColor.black.cgColor
     }
     
     override func viewWillAppear(_ animated: Bool) {

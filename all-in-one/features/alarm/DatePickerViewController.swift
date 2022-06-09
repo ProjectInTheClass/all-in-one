@@ -21,9 +21,6 @@ class DatePickerController:UIViewController {
        
         let stroyBoard = MainViewController()
         let starArray = stroyBoard.items
-        for starName in starArray {
-            name += ("\n- " + starName.searchCase)
-        }
         return name
     }
     
