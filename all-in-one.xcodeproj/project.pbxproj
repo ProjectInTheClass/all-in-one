@@ -38,7 +38,7 @@
 		4E98C4E82850C1B5004E690B /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C4E72850C1B5004E690B /* EditViewController.swift */; };
 		4E98C4EA2850C2E7004E690B /* ApiClient3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C4E92850C2E7004E690B /* ApiClient3.swift */; };
 		4E98C4EC2850CB50004E690B /* EditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E98C4EB2850CB50004E690B /* EditCell.swift */; };
-		4E98C4EE2851E793004E690B /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E98C4ED2851E793004E690B /* splash.png */; };
+		4E98C4F22851EF76004E690B /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E98C4F12851EF76004E690B /* splash.png */; };
 		80178FAC2850E6790008B13B /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 80178FA72850E6790008B13B /* CustomTableViewCell.xib */; };
 		80178FAD2850E6790008B13B /* AlarmTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178FA82850E6790008B13B /* AlarmTabViewController.swift */; };
 		80178FAE2850E6790008B13B /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178FA92850E6790008B13B /* DatePickerViewController.swift */; };
@@ -87,7 +87,7 @@
 		4E98C4E72850C1B5004E690B /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		4E98C4E92850C2E7004E690B /* ApiClient3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient3.swift; sourceTree = "<group>"; };
 		4E98C4EB2850CB50004E690B /* EditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCell.swift; sourceTree = "<group>"; };
-		4E98C4ED2851E793004E690B /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
+		4E98C4F12851EF76004E690B /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash.png; sourceTree = "<group>"; };
 		80178FA72850E6790008B13B /* CustomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		80178FA82850E6790008B13B /* AlarmTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmTabViewController.swift; sourceTree = "<group>"; };
 		80178FA92850E6790008B13B /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 		4E65AD0B28213F3E0081482B /* all-in-one */ = {
 			isa = PBXGroup;
 			children = (
-				4E98C4ED2851E793004E690B /* splash.png */,
+				4E98C4F12851EF76004E690B /* splash.png */,
 				4E98C4D6284E3A31004E690B /* network */,
 				4E98C4BC284E3A26004E690B /* features */,
 				4E47CCD1283F6E680097AA0B /* pairs */,
@@ -325,7 +325,7 @@
 				4E65AD1628213F3F0081482B /* Assets.xcassets in Resources */,
 				80178FAC2850E6790008B13B /* CustomTableViewCell.xib in Resources */,
 				4E65AD1428213F3E0081482B /* Main.storyboard in Resources */,
-				4E98C4EE2851E793004E690B /* splash.png in Resources */,
+				4E98C4F22851EF76004E690B /* splash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -578,7 +578,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "studio.all-in-one";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codershigh.allinone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -612,7 +612,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "studio.all-in-one";
+				PRODUCT_BUNDLE_IDENTIFIER = com.codershigh.allinone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
