@@ -19,7 +19,7 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBAction func cellOnOffSwitch(_ sender: UISwitch) {
         //cell on/off switch
-    
+        
     }
     
     override func awakeFromNib() {
