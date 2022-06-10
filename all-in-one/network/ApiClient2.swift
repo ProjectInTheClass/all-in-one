@@ -61,7 +61,7 @@ class ApiClient2 {
                     }
                     var summary = Summary(i.market, String(i.tradePrice))
                     summary.unit = "₩"
-                    self.controller.items.append(Summary(i.market, String(i.tradePrice)))
+                    self.controller.items.append(summary)
                 }
                 self.controller.tableView.reloadData()
             }catch {

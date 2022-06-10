@@ -20,12 +20,13 @@ class EditCell : UITableViewCell {
         for (index,star) in starred.enumerated() {
             if star == cellTitle.text {
                 starred.remove(at: index)
+                defaults.set(starred, forKey: "star-index")
+                
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "UpdateTable"), object: "message")
+                
                 break
             }
         }
-        
-        defaults.set(starred, forKey: "star-index")
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "UpdateTable"), object: "message")
     }
     
     override func awakeFromNib() {

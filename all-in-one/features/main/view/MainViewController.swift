@@ -131,6 +131,10 @@ class MainViewController: UIViewController {
             }
         }
         
+        else if ticker.suffix(3) == ".KS"{
+            client.getKstock(tickers: ticker)
+        }
+        
         else {
             client.getDataFromFinancialModeling(tickers:ticker)
         }
@@ -150,6 +154,7 @@ extension MainViewController : UITableViewDataSource {
         cell.starPrice.text = items[indexPath.row].value
         cell.cellTicker = items[indexPath.row].ticker
         
+        print("ticker: \(cell.cellTicker), unit: \(cell.starUnit.text)")
         return cell
     }
 }
@@ -157,5 +162,11 @@ extension MainViewController : UITableViewDataSource {
 extension MainViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+    }
+}
+
+extension String  {
+    var isNumber: Bool {
+        return !isEmpty && rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
     }
 }

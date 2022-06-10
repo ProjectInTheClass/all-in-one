@@ -35,6 +35,7 @@ class EditViewController: UIViewController {
     @objc func updateTable(){
         items = []
         setData()
+        tableView.reloadData()
     }
     
     func setData(){
@@ -90,6 +91,10 @@ class EditViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
                 client.getKorPremium(name: "김치프리미엄", kimp: client.kimp)
             }
+        }
+        
+        else if ticker.suffix(3) == ".KS"{
+            client.getKstock(tickers: ticker)
         }
         
         else {
