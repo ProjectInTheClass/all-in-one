@@ -121,17 +121,6 @@ class AllDataController: UIViewController {
             chartViewController.ticker = arr[1] + "KRW"
         }
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        var starred: [String] = []
-        
-        for item in items {
-            if defaults.bool(forKey: item.ticker) {
-                starred.append(item.ticker)
-            }
-        }
-        defaults.set(starred, forKey:"star-index")
-    }
 }
 
 extension AllDataController : UITableViewDataSource {

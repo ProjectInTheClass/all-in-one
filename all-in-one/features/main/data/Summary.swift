@@ -67,7 +67,7 @@ class Summary {
             self.titleKr = "카카오"
         case "Kia":
             self.titleKr = "기아자동차"
-        case "Pos":
+        case "POS":
             self.titleKr = "포스코"
         case "Cel":
             self.titleKr = "셀트리온"

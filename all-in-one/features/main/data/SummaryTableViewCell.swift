@@ -13,6 +13,8 @@ class SummaryTableViewCell: UITableViewCell {
     @IBOutlet var cellTitle: UILabel!
     var cellTicker: String!
     
+    let defaults = UserDefaults.standard
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,6 +26,11 @@ class SummaryTableViewCell: UITableViewCell {
     
     @IBAction func saveStatus(_ sender: UIButton) {
         sender.isSelected.toggle()
-        UserDefaults.standard.set(sender.isSelected, forKey:cellTicker)
+        defaults.set(sender.isSelected, forKey:cellTicker)
+        
+        var starred: [String] = defaults.array(forKey: "star-index")! as! [String]
+        starred.append(cellTicker)
+        
+        defaults.set(starred, forKey:"star-index")
     }
 }
