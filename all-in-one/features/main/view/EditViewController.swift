@@ -33,6 +33,7 @@ class EditViewController: UIViewController {
     }
     
     @objc func updateTable(){
+        print("update!")
         items = []
         setData()
         tableView.reloadData()
@@ -40,6 +41,7 @@ class EditViewController: UIViewController {
     
     func setData(){
         let starred = defaults.array(forKey: "star-index")
+        print("starred: \(starred)")
         for ticker in starred! {
             getData(ticker: ticker as! String)
         }

@@ -13,12 +13,13 @@ class EditCell : UITableViewCell {
     let defaults = UserDefaults.standard
     
     @IBAction func deleteStar(_ sender: Any) {
+        print("try to update..")
         defaults.set(false, forKey: cellTicker)
         
         var starred: [String] = defaults.array(forKey: "star-index") as! [String]
         
         for (index,star) in starred.enumerated() {
-            if star == cellTitle.text {
+            if star == cellTicker {
                 starred.remove(at: index)
                 defaults.set(starred, forKey: "star-index")
                 
