@@ -44,6 +44,7 @@
 		80178FAE2850E6790008B13B /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178FA92850E6790008B13B /* DatePickerViewController.swift */; };
 		80178FAF2850E6790008B13B /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178FAA2850E6790008B13B /* CustomTableViewCell.swift */; };
 		80178FB02850E6790008B13B /* alarmAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178FAB2850E6790008B13B /* alarmAPI.swift */; };
+		80178FB42854DDF00008B13B /* EditViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80178FB32854DDF00008B13B /* EditViewUI.swift */; };
 		9FA717ED2CEB9ABC93911D2A /* Pods_all_in_one.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3113E7EE47DD18936BD1999C /* Pods_all_in_one.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,7 @@
 		80178FA92850E6790008B13B /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		80178FAA2850E6790008B13B /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		80178FAB2850E6790008B13B /* alarmAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = alarmAPI.swift; sourceTree = "<group>"; };
+		80178FB32854DDF00008B13B /* EditViewUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditViewUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 				4E47CCD1283F6E680097AA0B /* pairs */,
 				4E65AD0C28213F3E0081482B /* AppDelegate.swift */,
 				4E65AD0E28213F3E0081482B /* SceneDelegate.swift */,
+				80178FB32854DDF00008B13B /* EditViewUI.swift */,
 				4E65AD1228213F3E0081482B /* Main.storyboard */,
 				4E65AD1528213F3F0081482B /* Assets.xcassets */,
 				4E65AD1728213F3F0081482B /* LaunchScreen.storyboard */,
@@ -390,6 +393,7 @@
 				4E8EAE882848AF6000906A1D /* Index.swift in Sources */,
 				4E98C4CD284E3A26004E690B /* NewsCellTableViewCell.swift in Sources */,
 				4E98C4EC2850CB50004E690B /* EditCell.swift in Sources */,
+				80178FB42854DDF00008B13B /* EditViewUI.swift in Sources */,
 				4E98C4DC284E3A31004E690B /* Network.swift in Sources */,
 				4E47CCD72841FA340097AA0B /* Coin.swift in Sources */,
 				4E98C4DB284E3A31004E690B /* ApiClient.swift in Sources */,

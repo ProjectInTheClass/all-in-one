@@ -193,7 +193,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" red="0.66564470529999997" green="0.77612155679999995" blue="0.96865195039999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Let-qa-wVR">
-                                    <rect key="frame" x="0.0" y="152.33333206176758" width="310" height="31"/>
+                                    <rect key="frame" x="0.0" y="152.33333206176761" width="310" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -248,7 +248,26 @@
                                                 <constraint firstItem="4ut-08-GLA" firstAttribute="leading" secondItem="mff-V1-QQA" secondAttribute="leadingMargin" id="lX4-D4-777"/>
                                                 <constraint firstItem="4ut-08-GLA" firstAttribute="top" secondItem="mff-V1-QQA" secondAttribute="topMargin" constant="2" id="pGi-RQ-sh4"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="2"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="-1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="starPrice" destination="DzA-d8-vpe" id="a2T-5Y-5qH"/>
                                             <outlet property="starTitle" destination="yNA-ue-x3V" id="Unj-lR-tjz"/>
