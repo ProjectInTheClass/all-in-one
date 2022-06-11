@@ -8,7 +8,7 @@
 import UIKit
 
 class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet weak var plusButton: UIImageView!
+
     @IBOutlet weak var alarmTableView: UITableView!
     @IBOutlet weak var allOnOff: UISwitch!
 
@@ -18,10 +18,10 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         //sendLocalNotification(seconds: 1.0, data: alarmList[0])
         // Do any additional setup after loading the view.
-        let tapPlusButton = UITapGestureRecognizer(target: self, action: #selector(plusButtonAction(tapPlusButton:)))
-        
-        plusButton.isUserInteractionEnabled = true
-        plusButton.addGestureRecognizer(tapPlusButton)
+//        let tapPlusButton = UITapGestureRecognizer(target: self, action: #selector(plusButtonAction(tapPlusButton:)))
+//
+//        plusButton.isUserInteractionEnabled = true
+//        plusButton.addGestureRecognizer(tapPlusButton)
         alarmTableView.delegate = self
         alarmTableView.dataSource = self
         NotificationCenter.default.addObserver(self, selector: #selector(didRecieveNotification(_:)), name: NSNotification.Name("ReloadPage"), object: nil)
@@ -91,24 +91,28 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
 //        return configuration
 //    }
 //
-    @objc func plusButtonAction(tapPlusButton :UITapGestureRecognizer) {
+    
+//    @objc func plusButtonAction(tapPlusButton :UITapGestureRecognizer) {
+//
+//
+//    }
+    @IBAction func plusButtonAction(_ sender: Any) {
         notificationCenter.getNotificationSettings() {setting in
-            if setting.authorizationStatus == UNAuthorizationStatus.authorized {
-                
-            } else {
-                requestNotificationAuthorization()
-            }
-        }
-        // 뷰 객체 얻어오기 (storyboard ID로 ViewController구분)
-        guard let datePicker = storyboard?.instantiateViewController(identifier: "DatePicker") else {
-            return
-        }
+                    if setting.authorizationStatus == UNAuthorizationStatus.authorized {
         
-        isNew = -1
-        self.present(datePicker, animated: true)
+                    } else {
+                        requestNotificationAuthorization()
+                    }
+                }
+                // 뷰 객체 얻어오기 (storyboard ID로 ViewController구분)
+                guard let datePicker = storyboard?.instantiateViewController(identifier: "DatePicker") else {
+                    return
+                }
         
+                isNew = -1
+                self.present(datePicker, animated: true)
     }
-
+    
     private func registerTableViewCells() {
         let textFieldCell = UINib(nibName: "CustomTableViewCell", bundle: nil)
         self.alarmTableView.register(textFieldCell, forCellReuseIdentifier: "CustomTableViewCell")
