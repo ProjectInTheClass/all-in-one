@@ -12,12 +12,6 @@ import UIKit
 class ApiClient2 {
     let controller: MainViewController
     
-    var kimp = [
-        "btcusd": 0.0,
-        "btckrw": 0.0,
-        "rate": 0.0
-    ]
-    
     init(controller: MainViewController){
         self.controller = controller
     }
@@ -26,9 +20,6 @@ class ApiClient2 {
         Network.shared.getAPIData(url: "https://api.manana.kr/exchange/rate.json", parameters: parameters, completion: { (data) -> (Void) in
             do {
                 let res = try JSONDecoder().decode(Manana.self, from : data)
-                if name == "USDKRW"{
-                    self.kimp["rate"] = res[0].rate
-                }
                 self.controller.items.append(Summary(name, String(format: "%.2f", res[0].rate)))
                 self.controller.tableView.reloadData()
             }catch {
@@ -42,7 +33,6 @@ class ApiClient2 {
             do {
                 let res = try JSONDecoder().decode(BTCUSD.self, from : data)
                 let price = Double(res.lastPrice)!
-                self.kimp["btcusd"] = price
                 self.controller.items.append(Summary(name, String(format: "%.2f", price)))
                 self.controller.tableView.reloadData()
             }catch {
@@ -56,9 +46,6 @@ class ApiClient2 {
             do {
                 let res = try JSONDecoder().decode(Coin.self, from : data)
                 for i in res{
-                    if i.market == "KRW-BTC"{
-                        self.kimp["btckrw"] = Double(i.tradePrice)
-                    }
                     var summary = Summary(i.market, String(i.tradePrice))
                     summary.unit = "₩"
                     self.controller.items.append(summary)
@@ -164,16 +151,55 @@ class ApiClient2 {
         })
     }
 
-    func getKorPremium(name: String, kimp: [String:Double]){
-        print("kimp: \(self.kimp)")
-        let global = kimp["btcusd"]!
-        let kor = kimp["btckrw"]!
-        let rate = kimp["rate"]!
+    func getKorPremium(name: String){
+        var kimp = [
+            "btcusd": 0.0,
+            "btckrw": 0.0,
+            "rate": 0.0
+        ]
         
-        let premium = (kor / global / rate) * 100 - 100
+        Network.shared.getAPIData(url: "https://api.manana.kr/exchange/rate.json", parameters: [
+            "base": "KRW",
+            "code": "USD"
+        ], completion: { (data) -> (Void) in
+            do {
+                let res = try JSONDecoder().decode(Manana.self, from : data)
+                    kimp["rate"] = res[0].rate
+            }catch {
+                print(error)
+            }
+        })
         
-        self.controller.items.append(Summary(name, String(format: "%.2f", premium)))
-        self.controller.tableView.reloadData()
+        Network.shared.getAPIData(url: "https://api.bitfinex.com/v1/pubticker/btcusd", parameters: [:], completion: { (data) -> (Void) in
+            do {
+                let res = try JSONDecoder().decode(BTCUSD.self, from : data)
+                let price = Double(res.lastPrice)!
+                kimp["btcusd"] = price
+            }catch {
+                print(error)
+            }
+        })
+        
+        Network.shared.getAPIData(url: "https://api.upbit.com/v1/ticker", parameters: ["markets": "KRW-BTC"], completion: { (data) -> (Void) in
+            do {
+                let res = try JSONDecoder().decode(Coin.self, from : data)
+                kimp["btckrw"] = Double(res[0].tradePrice)
+            }catch {
+                print(error)
+            }
+        })
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
+            print(kimp)
+            let global = kimp["btcusd"]!
+            let kor = kimp["btckrw"]!
+            let rate = kimp["rate"]!
+            
+            let premium = (kor / global / rate) * 100 - 100
+            
+            self.controller.items.append(Summary(name, String(format: "%.2f", premium)))
+            self.controller.tableView.reloadData()
+        }
     }
 }
 

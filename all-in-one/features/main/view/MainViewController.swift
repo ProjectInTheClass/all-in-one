@@ -126,9 +126,7 @@ class MainViewController: UIViewController {
         }
         
         else if(ticker == "김치프리미엄"){
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
-                client.getKorPremium(name: "김치프리미엄", kimp: client.kimp)
-            }
+            client.getKorPremium(name: "김치프리미엄")
         }
         
         else if ticker.suffix(3) == ".KS"{
