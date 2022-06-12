@@ -62,7 +62,9 @@ class ApiClient2 {
         Network.shared.getAPIData(url: "https://www.goldapi.io/api/\(ticker)/KRW/", parameters: parameters, completion: { (data) -> (Void) in
             do {
                 let res = try JSONDecoder().decode(Gold.self, from : data)
-                self.controller.items.append(Summary(name, String(format: "%.2f", res.price)))
+                let s = Summary(name, String(format: "%.2f", res.price))
+                s.unit = "₩"
+                self.controller.items.append(s)
                 self.controller.tableView.reloadData()
             }catch {
                 print(error)
