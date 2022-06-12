@@ -120,6 +120,11 @@ class AllDataController: UIViewController {
             let arr = sender.cellTicker.components(separatedBy: "-")
             chartViewController.ticker = arr[1] + "KRW"
         }
+        
+        if sender.cellTicker.suffix(3) == ".KS" {
+            let arr = sender.cellTicker.components(separatedBy: ".")
+            chartViewController.ticker = arr[0]
+        }
     }
 }
 
