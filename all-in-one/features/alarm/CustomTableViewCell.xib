@@ -16,26 +16,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="321" height="60"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="minus.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZNe-eJ-g96">
-                        <rect key="frame" x="5" y="5" width="50" height="50"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="minus.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZNe-eJ-g96">
+                        <rect key="frame" x="5" y="5" width="50" height="49"/>
                         <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="2mf-ly-mRL"/>
+                            <constraint firstAttribute="height" constant="50" id="3nO-Ae-nOJ"/>
+                        </constraints>
                     </imageView>
-                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qgu-r4-uoP">
-                        <rect key="frame" x="265" y="15" width="49" height="31"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qgu-r4-uoP">
+                        <rect key="frame" x="263" y="14" width="51" height="31"/>
                         <connections>
                             <action selector="cellOnOffSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="GDm-QH-SQj"/>
                         </connections>
                     </switch>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mainMessage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ND6-uM-olA">
-                        <rect key="frame" x="63" y="17" width="194" height="27"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mainMessage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ND6-uM-olA">
+                        <rect key="frame" x="63.5" y="11.5" width="181" height="36"/>
                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="ZNe-eJ-g96" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="6ES-AE-PsW"/>
+                    <constraint firstAttribute="trailing" secondItem="Qgu-r4-uoP" secondAttribute="trailing" constant="9" id="EiT-6C-m3w"/>
+                    <constraint firstItem="ND6-uM-olA" firstAttribute="centerY" secondItem="ZNe-eJ-g96" secondAttribute="centerY" id="YDC-Gy-46b"/>
+                    <constraint firstItem="ZNe-eJ-g96" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4.5" id="jOt-qS-xCB"/>
+                    <constraint firstItem="ND6-uM-olA" firstAttribute="leading" secondItem="ZNe-eJ-g96" secondAttribute="trailing" constant="8.5" id="l5G-az-QO3"/>
+                    <constraint firstItem="Qgu-r4-uoP" firstAttribute="centerY" secondItem="ZNe-eJ-g96" secondAttribute="centerY" id="lX8-YO-wFs"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
