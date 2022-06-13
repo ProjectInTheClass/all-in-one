@@ -19,7 +19,16 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBAction func cellOnOffSwitch(_ sender: UISwitch) {
         //cell on/off switch
-        
+        if alarmDataList[thisIndexPathRow].isOn {
+            alarmOffFunc(num: thisIndexPathRow)
+            
+        } else {
+            if allAlarmOn {
+                alarmOnFunc(num: thisIndexPathRow)
+            } else {
+                alertPageSignal(num: thisIndexPathRow)
+            }
+        }
     }
     
     override func awakeFromNib() {

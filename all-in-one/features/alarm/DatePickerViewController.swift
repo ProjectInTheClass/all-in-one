@@ -18,7 +18,6 @@ class DatePickerController:UIViewController {
     
     func namedata() -> String {
         var name :String = ""
-       
         let stroyBoard = MainViewController()
         let starArray = stroyBoard.items
         return name
@@ -56,4 +55,3 @@ class DatePickerController:UIViewController {
         dismiss(animated: true)
     }
 }
-

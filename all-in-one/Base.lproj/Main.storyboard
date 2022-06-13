@@ -193,7 +193,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="sectionIndexBackgroundColor" red="0.66564470529999997" green="0.77612155679999995" blue="0.96865195039999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Let-qa-wVR">
-                                    <rect key="frame" x="0.0" y="152.33333206176761" width="310" height="31"/>
+                                    <rect key="frame" x="0.0" y="152.33333206176758" width="310" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                     <color key="tintColor" systemColor="systemBackgroundColor"/>
@@ -374,7 +374,7 @@
                     <connections>
                         <segue destination="4d0-VN-XkY" kind="relationship" relationship="viewControllers" id="VpV-nO-h9A"/>
                         <segue destination="gv9-mV-NRA" kind="relationship" relationship="viewControllers" id="cw8-TV-UAN"/>
-                        <segue destination="5Rk-ET-XXW" kind="relationship" relationship="viewControllers" id="7dw-cS-lnA"/>
+                        <segue destination="GuM-sG-NIb" kind="relationship" relationship="viewControllers" id="7dw-cS-lnA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zGH-xG-dvx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -596,7 +596,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1l-OE-DSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1643" y="3119"/>
+            <point key="canvasLocation" x="2570.7692307692305" y="3118.7203791469192"/>
         </scene>
         <!--AlarmSetting-->
         <scene sceneID="eJ6-rF-t5K">
@@ -645,6 +645,30 @@
                             <constraint firstItem="ueA-Hy-ixS" firstAttribute="top" secondItem="6dU-JW-S2z" secondAttribute="bottom" constant="11" id="LUn-bE-AGg"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="알람 설정" id="Krw-dD-qYP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="zIA-5t-Nxq">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="addButtonAction:" destination="5Rk-ET-XXW" id="IO0-Ek-o8b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addAlarmButton" destination="zIA-5t-Nxq" id="5ZP-Wn-HmE"/>
+                        <outlet property="alarmTableView" destination="ueA-Hy-ixS" id="n3z-Oc-4dj"/>
+                        <outlet property="allOnOff" destination="7dk-tK-Mqo" id="2HI-Tc-w6p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wi1-16-440" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776.9230769230769" y="3121.5639810426537"/>
+        </scene>
+        <!--알람-->
+        <scene sceneID="43x-b6-k1F">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GuM-sG-NIb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="알람" landscapeImage="clock" catalog="system" id="RDh-1s-3sh">
                         <imageReference key="image" image="clock.badge.checkmark" catalog="system" symbolScale="default" renderingMode="hierarchical">
                             <hierarchicalColors>
@@ -662,35 +686,26 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="알람 설정" id="27T-mE-Nfc">
-                        <barButtonItem key="leftBarButtonItem" title="Back" image="arrow.backward" catalog="system" id="0fl-Dd-KLU">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="agT-aD-VeM">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="plusButtonAction:" destination="5Rk-ET-XXW" id="fVo-rx-wDm"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RoE-7W-rNW">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <outlet property="alarmTableView" destination="ueA-Hy-ixS" id="n3z-Oc-4dj"/>
-                        <outlet property="allOnOff" destination="7dk-tK-Mqo" id="2HI-Tc-w6p"/>
+                        <segue destination="5Rk-ET-XXW" kind="relationship" relationship="rootViewController" id="fHJ-du-mo9"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wi1-16-440" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pfg-6m-QFm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="3122"/>
+            <point key="canvasLocation" x="847.69230769230762" y="3121.5639810426537"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="IQr-cr-T1d"/>
-        <segue reference="tmS-tm-Cpf"/>
+        <segue reference="dvC-rc-Plu"/>
+        <segue reference="yPL-8L-WWN"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="calendar.badge.plus" catalog="system" width="128" height="108"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="clock.badge.checkmark" catalog="system" width="128" height="113"/>

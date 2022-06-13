@@ -25,7 +25,7 @@
                         <rect key="frame" x="265" y="15" width="49" height="31"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <connections>
-                            <action selector="cellOnOffSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="vjQ-QZ-Zg9"/>
+                            <action selector="cellOnOffSwitch:" destination="KGk-i7-Jjw" eventType="valueChanged" id="GDm-QH-SQj"/>
                         </connections>
                     </switch>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mainMessage" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ND6-uM-olA">
@@ -39,8 +39,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="deleteCell" destination="ZNe-eJ-g96" id="XJq-BT-Xpg"/>
-                <outlet property="mainMessage" destination="ND6-uM-olA" id="66g-rw-MfL"/>
+                <outlet property="deleteCell" destination="ZNe-eJ-g96" id="8lE-SK-T3M"/>
+                <outlet property="mainMessage" destination="ND6-uM-olA" id="GXS-Yx-BXc"/>
             </connections>
             <point key="canvasLocation" x="142.75362318840581" y="92.410714285714278"/>
         </tableViewCell>
