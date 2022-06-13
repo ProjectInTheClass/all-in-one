@@ -27,8 +27,10 @@ class DatePickerController:UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        
+        let timeFormat = DateFormatter()
+        let time = Date()
+        timeFormat.dateFormat = "aa hh:mm"
+        dateTime = timeFormat.string(from: time)
 //        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: timeSelector, userInfo: nil, repeats: true)
     }
 
@@ -42,6 +44,7 @@ class DatePickerController:UIViewController {
     @IBAction func datePickerView(_ sender: UIDatePicker) {
         let time = DateFormatter()
         time.dateFormat = "aa hh:mm"
+
         dateTime = time.string(from: sender.date)
     }
 

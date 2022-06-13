@@ -14,53 +14,58 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var addAlarmButton: UIBarButtonItem!
     
     override func viewDidLoad() {
-        //sendLocalNotification(seconds: 1.0, data: alarmList[0])
         super.viewDidLoad()
-        //sendLocalNotification(seconds: 1.0, data: alarmList[0])
-        // Do any additional setup after loading the view.
-//        let tapPlusButton = UITapGestureRecognizer(target: self, action: #selector(plusButtonAction(tapPlusButton:)))
-//
-//        plusButton.isUserInteractionEnabled = true
-//        plusButton.addGestureRecognizer(tapPlusButton)
+      
         alarmTableView.delegate = self
         alarmTableView.dataSource = self
         NotificationCenter.default.addObserver(self, selector: #selector(didRecieveReloadNotification(_:)), name: NSNotification.Name("ReloadPage"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(didRecieveAlarmNotification(_:)), name: NSNotification.Name("AllAlarmOn"), object: nil)
         getData()
+        //알림 누를 경우 main page open
+        NotificationCenter.default.addObserver(self, selector: #selector(didMainPageOpen(_:)), name: NSNotification.Name("MainPage"), object: nil)
 
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-//        self.navigationController?.navigationBar.tintColor = .black
-//        self.navigationController?.navigationItem.title = "알람 설정"
-//        self.navigationController?.navigationItem.rightBarButtonItem
-
+        allOnOff.isOn = allAlarmOn
         self.registerTableViewCells()
     }
     
-    @objc func didTabAddButton() {
-        notificationCenter.getNotificationSettings() {setting in
-                    if setting.authorizationStatus == UNAuthorizationStatus.authorized {
+    @objc func didMainPageOpen(_ notification: Notification) {
+        // 스토리 보드 객체 가져오기 (인자 : 이름, 읽어들일 위치)
+        let storyboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: Bundle.main)
         
-                    } else {
-                        requestNotificationAuthorization()
-                    }
-                }
-                // 뷰 객체 얻어오기 (storyboard ID로 ViewController구분)
-                guard let datePicker = storyboard?.instantiateViewController(identifier: "DatePicker") else {
-                    return
-                }
-        
-                isNewOrRowNumber = -1
-                self.present(datePicker, animated: true)
+        // 뷰 객체 얻어오기 (storyboard ID로 ViewController구분)
+        guard let main = storyboard?.instantiateViewController(withIdentifier: "Main") else {
+            return
+        }
+        self.present(main, animated: true)
     }
     
+//    @objc func didTabAddButton() {
+//        notificationCenter.getNotificationSettings() {setting in
+//                    if setting.authorizationStatus == UNAuthorizationStatus.authorized {
+//
+//                    } else {
+//                        requestNotificationAuthorization()
+//                    }
+//                }
+//                // 뷰 객체 얻어오기 (storyboard ID로 ViewController구분)
+//                guard let datePicker = storyboard?.instantiateViewController(identifier: "DatePicker") else {
+//                    return
+//                }
+//
+//                isNewOrRowNumber = -1
+//                self.present(datePicker, animated: true)
+//    }
+//
     @objc func didRecieveAlarmNotification(_ notification: Notification) {
         let getValue = notification.object as! Int
         let alert = UIAlertController(title: "알람", message: "모든 알람이 꺼져있습니다.\n 모든 알람을 켜시겠습니까?", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .destructive) { (action) in
            
             allAlarmOnFunc()
-            self.allOnOff.isOn = true
+            allAlarmOn = true
+            self.allOnOff.isOn = allAlarmOn
             alarmOnFunc(num: getValue)
+            self.alarmTableView.reloadData()
         }
         alert.addAction(defaultAction)
         present(alert, animated: false, completion: nil)
@@ -72,8 +77,7 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
      }
     
     override func viewWillAppear(_ animated: Bool) {
-        allOnOff.isOn = (allOnOff != nil)
-        alarmTableView.reloadData()
+        allOnOff.isOn = allAlarmOn
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -82,6 +86,7 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
             //cell.title.text = alarmDataList[indexPath.row].name
             cell.mainMessage.text = alarmDataList[indexPath.row].time
             cell.thisIndexPathRow = indexPath.row
+            cell.cellOnOffSwitch.isOn = alarmDataList[indexPath.row].isOn
             return cell
         }
         return UITableViewCell()
@@ -165,6 +170,7 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
             allAlarmOn = true
             allAlarmOnFunc()
         }
+        alarmTableView.reloadData()
     }
    
 }

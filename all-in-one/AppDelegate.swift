@@ -39,6 +39,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 // 앱이 실행 중 일때 알람 처리하는 메서드
 extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.list, .banner])
+        let application = UIApplication.shared
+        if application.applicationState == .active {
+            
+            completionHandler([.list, .banner])
+        } else if application.applicationState == .inactive {
+            NotificationCenter.default.post(name: NSNotification.Name("MainPage"), object: nil, userInfo: nil)
+        }
+        
     }
 }
