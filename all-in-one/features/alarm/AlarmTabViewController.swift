@@ -86,7 +86,11 @@ class AlarmTabViewController: UIViewController, UITableViewDelegate, UITableView
             //cell.title.text = alarmDataList[indexPath.row].name
             cell.mainMessage.text = alarmDataList[indexPath.row].time
             cell.thisIndexPathRow = indexPath.row
-            cell.cellOnOffSwitch.isOn = alarmDataList[indexPath.row].isOn
+            if allAlarmOn {
+                cell.cellOnOffSwitch.isOn = alarmDataList[indexPath.row].isOn
+            } else {
+                cell.cellOnOffSwitch.isOn = allAlarmOn
+            }
             return cell
         }
         return UITableViewCell()
