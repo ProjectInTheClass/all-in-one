@@ -48,6 +48,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="cellOnOffSwitch" destination="Qgu-r4-uoP" id="TPJ-LN-Inf"/>
                 <outlet property="deleteCell" destination="ZNe-eJ-g96" id="8lE-SK-T3M"/>
                 <outlet property="mainMessage" destination="ND6-uM-olA" id="GXS-Yx-BXc"/>
             </connections>

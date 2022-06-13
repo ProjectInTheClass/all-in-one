@@ -17,6 +17,8 @@ class CustomTableViewCell: UITableViewCell {
     
     @IBOutlet weak var deleteCell: UIImageView!
     
+    @IBOutlet weak var cellOnOffSwitch: UISwitch!
+    
     @IBAction func cellOnOffSwitch(_ sender: UISwitch) {
         //cell on/off switch
         if alarmDataList[thisIndexPathRow].isOn {
@@ -29,6 +31,7 @@ class CustomTableViewCell: UITableViewCell {
                 alertPageSignal(num: thisIndexPathRow)
             }
         }
+        sender.isOn = alarmDataList[thisIndexPathRow].isOn
     }
     
     override func awakeFromNib() {

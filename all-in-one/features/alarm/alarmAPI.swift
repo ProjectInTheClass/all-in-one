@@ -164,6 +164,7 @@ func removeAlarmData(num: Int) {
 
 func allAlarmOnFunc() {
     getData()
+    allAlarmOn = true
     for data in alarmDataList {
         if data.isOn {
             sendLocalNotification(data: data)
@@ -172,6 +173,7 @@ func allAlarmOnFunc() {
 }
 
 func allAlarmOffFunc() {
+    allAlarmOn = false
     notificationCenter.removeAllPendingNotificationRequests()
 }
 
