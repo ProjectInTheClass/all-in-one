@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "2730"; ObjectID = "DzA-d8-vpe"; */
+"DzA-d8-vpe.text" = "2730";
+
+/* Class = "UIButton"; configuration.title = "모든 데이터 보기                                 > "; ObjectID = "KoM-yd-QeR"; */
+"KoM-yd-QeR.configuration.title" = "모든 데이터 보기                                 > ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "KoM-yd-QeR"; */
+"KoM-yd-QeR.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "코스피"; ObjectID = "Lvr-BQ-lS7"; */
+"Lvr-BQ-lS7.text" = "코스피";
+
+/* Class = "UILabel"; text = "point"; ObjectID = "QiS-Gd-eG6"; */
+"QiS-Gd-eG6.text" = "point";
+
+/* Class = "UINavigationItem"; title = "Events"; ObjectID = "SuK-8x-Aw3"; */
+"SuK-8x-Aw3.title" = "Events";
+
+/* Class = "UILabel"; text = "3700"; ObjectID = "ZO1-vm-ffz"; */
+"ZO1-vm-ffz.text" = "3700";
+
+/* Class = "UILabel"; text = "point"; ObjectID = "aNd-Gi-sOQ"; */
+"aNd-Gi-sOQ.text" = "point";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "aPs-yy-mDi"; */
+"aPs-yy-mDi.title" = "Item";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "akP-yM-Zav"; */
+"akP-yM-Zav.text" = "Label";
+
+/* Class = "UILabel"; text = "즐겨찾기"; ObjectID = "eme-8R-dMc"; */
+"eme-8R-dMc.text" = "즐겨찾기";
+
+/* Class = "UILabel"; text = "요약"; ObjectID = "tzx-jX-DzI"; */
+"tzx-jX-DzI.text" = "요약";
+
+/* Class = "UILabel"; text = "코스피"; ObjectID = "yNA-ue-x3V"; */
+"yNA-ue-x3V.text" = "코스피";
