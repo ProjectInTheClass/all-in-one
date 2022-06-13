@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="fUw-Lh-xPX">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="-355.5" y="0.0" width="1125" height="896"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -27,8 +27,6 @@
                             <constraint firstItem="fUw-Lh-xPX" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Ctl-o3-M2e"/>
                             <constraint firstItem="fUw-Lh-xPX" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="F8u-oi-Z9A"/>
                             <constraint firstAttribute="bottom" secondItem="fUw-Lh-xPX" secondAttribute="bottom" id="Nmh-61-SAe"/>
-                            <constraint firstItem="fUw-Lh-xPX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OJW-iy-0GU"/>
-                            <constraint firstItem="fUw-Lh-xPX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rU0-Bx-7au"/>
                         </constraints>
                     </view>
                 </viewController>

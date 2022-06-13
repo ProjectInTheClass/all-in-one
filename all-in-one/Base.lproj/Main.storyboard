@@ -164,7 +164,7 @@
             </objects>
             <point key="canvasLocation" x="2780" y="-117"/>
         </scene>
-        <!--Main View Controller-->
+        <!--모아보기-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="MainViewController" customModule="all_in_one" customModuleProvider="target" sceneMemberID="viewController">
@@ -172,12 +172,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="요약" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tzx-jX-DzI">
-                                <rect key="frame" x="122.66666666666669" y="45" width="145" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="즐겨찾기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eme-8R-dMc">
                                 <rect key="frame" x="40" y="98" width="70" height="30"/>
                                 <constraints>
@@ -293,20 +287,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eme-8R-dMc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="9Qm-te-RUq"/>
-                            <constraint firstItem="tzx-jX-DzI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="45" id="Cqv-6K-2Ya"/>
                             <constraint firstItem="nJ6-g1-mrw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="EKo-uw-Egf"/>
                             <constraint firstItem="nJ6-g1-mrw" firstAttribute="trailing" secondItem="vxU-wg-CXs" secondAttribute="trailing" id="Nsd-8O-wce"/>
-                            <constraint firstAttribute="trailing" secondItem="tzx-jX-DzI" secondAttribute="trailing" constant="122.5" id="SYO-vP-g9m"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vxU-wg-CXs" secondAttribute="trailing" constant="40" id="Wia-ZM-TW1"/>
                             <constraint firstItem="vxU-wg-CXs" firstAttribute="top" secondItem="eme-8R-dMc" secondAttribute="bottom" constant="20" id="Zbw-ku-fmj"/>
                             <constraint firstItem="nJ6-g1-mrw" firstAttribute="centerY" secondItem="eme-8R-dMc" secondAttribute="centerY" id="ibK-vl-key"/>
                             <constraint firstItem="eme-8R-dMc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="mQU-iI-cN5"/>
                             <constraint firstItem="vxU-wg-CXs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="oWP-Sf-Spi"/>
-                            <constraint firstItem="tzx-jX-DzI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="122.5" id="vlj-oo-ucX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vxU-wg-CXs" secondAttribute="bottom" constant="10" id="xNF-Ce-SeD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yEV-f4-en9"/>
+                    <navigationItem key="navigationItem" title="모아보기" id="yEV-f4-en9"/>
                     <connections>
                         <outlet property="Btn_All" destination="Let-qa-wVR" id="2Ft-CL-O69"/>
                         <outlet property="tableView" destination="vxU-wg-CXs" id="ycT-2Q-YzY"/>
@@ -406,6 +397,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RPy-mF-eT1">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -501,6 +498,9 @@
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                         </textAttributes>
                     </navigationBar>
@@ -694,6 +694,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RoE-7W-rNW">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
