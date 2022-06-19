@@ -29,7 +29,18 @@ class SummaryTableViewCell: UITableViewCell {
         defaults.set(sender.isSelected, forKey:cellTicker)
         
         var starred: [String] = defaults.array(forKey: "star-index")! as! [String]
-        starred.append(cellTicker)
+
+        if sender.isSelected {
+            starred.append(cellTicker)
+        }
+        else {
+            for (index,star) in starred.enumerated() {
+                if star == cellTicker {
+                    starred.remove(at: index)
+                    break
+                }
+            }
+        }
         
         defaults.set(starred, forKey:"star-index")
     }

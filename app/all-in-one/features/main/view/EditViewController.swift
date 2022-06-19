@@ -14,6 +14,7 @@ class EditViewController: UIViewController {
     var items: [Summary] = []
     
     let defaults = UserDefaults.standard
+    var kimpLoaded = false
 
     func setupTableView() {
         self.tableView.delegate = self
@@ -29,6 +30,7 @@ class EditViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        kimpLoaded = false
         setData()
     }
     
@@ -89,9 +91,13 @@ class EditViewController: UIViewController {
             client.getDataFromGoldAPI(name: ticker)
         }
         
+        
         else if(ticker == "김치프리미엄"){
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
-                client.getKorPremium(name: "김치프리미엄", kimp: client.kimp)
+            if !kimpLoaded{
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3){
+                    client.getKorPremium(name: "김치프리미엄", kimp: client.kimp)
+                    self.kimpLoaded = true
+                }
             }
         }
         

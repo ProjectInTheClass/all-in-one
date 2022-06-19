@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     
     var items: [Summary] = []
     let defaults = UserDefaults.standard
+    var kimpLoaded = false
     
     override func viewWillDisappear(_ animated: Bool) {
         items = []
@@ -40,6 +41,7 @@ class MainViewController: UIViewController {
         for ticker in starred! {
             getData(ticker: ticker as! String)
         }
+        kimpLoaded = false
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -131,7 +133,10 @@ class MainViewController: UIViewController {
         }
         
         else if(ticker == "김치프리미엄"){
-            client.getKorPremium(name: "김치프리미엄")
+            if !kimpLoaded{
+                client.getKorPremium(name: "김치프리미엄")
+                kimpLoaded = true
+            }
         }
         
         else if ticker.suffix(3) == ".KS"{
